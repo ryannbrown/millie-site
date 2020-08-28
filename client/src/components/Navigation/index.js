@@ -42,33 +42,23 @@ export default class Navigation extends Component {
 
 
     return (
-      // <Navbar style={{padding:'0px'}}>
-      //   <div className="nav-brand-box">
-      //     <div className="menu-icon"><TemporaryDrawer></TemporaryDrawer></div>
-      //     <div style={{backgroundColor: this.state.status ==="top" ? "transparent" : "rgba(217, 189, 189, 1)"}} className="title">
-      //       <Navbar.Brand href="/">Kathryn Judy Brown</Navbar.Brand>
-      //       <Navbar.Brand className="tagline" href="#home">Not your Mama's Healer</Navbar.Brand>
-      //     </div>
-
-      //   </div>
-      // </Navbar>
-
+  
       <div>
-        <Navbar fixed="top" style={{ backgroundColor: this.state.status === "top" ? "transparent" : "#FFFFFF", transition: '.6s' }} className="title">
-          <Nav className="justify-content-center" activeKey="/home">
-            <Nav.Item className="cta-nav-btn">
-              <a href="/contact">
-                <Button className="contact-btn-link">Component</Button>
-              </a>
-              {/* <a href="/component">
-                <Button className="offerings-btn-link" style={{ backgroundColor: this.state.status === "top" ? "#86BFFF" : "white", color: this.state.status === "top" ? "white" : "#86BFFF", transition: '.6s' }}>Subscribe</Button>
-              </a> */}
-            </Nav.Item>
-            <Nav.Item className="nav-arrow">
-              {/* <Image style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={whiteArrow}></Image> */}
-            </Nav.Item>
-          </Nav>
-        </Navbar>
+         <Navbar expand="lg">
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Brand href="#home"> Millie
+    {/* <Image src={logo} width="300px"></Image> */}
+  </Navbar.Brand>
+  <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="">
+      <Nav.Link href="/">Works</Nav.Link>
+      <Nav.Link href="/about">About</Nav.Link>
+
+      
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+     
       </div >
     )
 

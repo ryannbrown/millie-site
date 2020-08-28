@@ -1,0 +1,17 @@
+.arrow-img{
+    /* font-size:30px; */
+    /* height: 60px; */
+    width:50px;
+    opacity:.5 !important;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    margin-left:-46px;
+    left:50%;
+    align-items: center;
+    padding: 10px;
+    transition: .6s;
+    text-align: center;
+    border:none;
+}
