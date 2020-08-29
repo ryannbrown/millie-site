@@ -18,24 +18,18 @@ left:30%;
     width:50%;
 }
 
-.off-box-parent{
-    position:relative;
-    top:45%;
-    width:50%;
-    left:25%;
+.off-box-parent {
+    position: relative;
+    width: 100%;
 }
 
-.off-box-container{
-    position:relative;
-    /* width:100%; */
-    max-width:800px;
-    top:50%;
-    justify-content: center;
-    /* left:25%; */
-    /* width:100%; */
-    display:flex;
-    flex-wrap:wrap;
-    /* margin:0px auto; */
+.off-box-container {
+    position: relative;
+    max-width: 800px;
+    top: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
 }
 
 /* .off-box-container .off {
