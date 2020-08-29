@@ -71,8 +71,8 @@ export default class Hero extends Component {
             position: `relative`
             //   cover no-repeat center center fixed`
         }}>
-            {/* <Image src={heroImg}></Image> */}
-            <div className="tc w-100 hero-text-block">
+            <Image className="centered-logo" src={this.props.logo}></Image>
+            <div className=" hero-text-block">
                 <h1 className="hero-header">{this.props.title}</h1>
                 <p className="hero-phrase">{this.props.paragraph1}</p>
                 <p className="hero-phrase">{this.props.paragraph2}</p>

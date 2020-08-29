@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './style.css';
 import { Drawer } from '@material-ui/core';
+import whiteLogo from '../../media/white-logo.png'
 // import TemporaryDrawer from '../Drawer/index'
 
 // import logo from '../../media/moons.png'
@@ -46,13 +47,13 @@ export default class Navigation extends Component {
       <div>
          <Navbar expand="lg">
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Brand href="/"> Millie
-    {/* <Image src={logo} width="300px"></Image> */}
+  <Navbar.Brand href="/"> 
+    <Image src={this.props.logo} width="100px"></Image>
   </Navbar.Brand>
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="">
-      <Nav.Link href="/">Works</Nav.Link>
-      <Nav.Link href="/about">About</Nav.Link>
+      <Nav.Link style={{color:`${this.props.color}`}} href="/">Works</Nav.Link>
+      <Nav.Link style={{color:`${this.props.color}`}} href="/about">About</Nav.Link>
 
       
     </Nav>

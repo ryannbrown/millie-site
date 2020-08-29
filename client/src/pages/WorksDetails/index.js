@@ -5,8 +5,8 @@ import $ from 'jquery';
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // const queryString = require('query-string');
-
-
+import Navigation from "../../components/Navigation"
+import logo from '../../media/millie-logo-colored.png'
 require("dotenv").config();
 
 export default class WorksDetails extends Component {
@@ -57,6 +57,8 @@ export default class WorksDetails extends Component {
         const nextModal = this.props.worksObject[Number(chosenWork) + 1];
 
         return (
+            <div>
+               <Navigation logo={logo} color="#FF8686"/>
 
             <div className="works-page">
                 {thisModal ? (
@@ -83,6 +85,7 @@ export default class WorksDetails extends Component {
                             <a href={`/works/${nextModal.id}`}>next</a>}
                     </div>
                 </div>
+            </div>
             </div>
         )
     }

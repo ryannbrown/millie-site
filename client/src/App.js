@@ -91,7 +91,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation />
+      {/* <Navigation /> */}
       <Router history={history}>
         <Switch>
           {/* <Route path="/" component={Offerings}/> */}

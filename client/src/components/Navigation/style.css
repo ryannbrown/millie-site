@@ -39,7 +39,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 .nav {
 
     color:white;
-    background-color:transparent !important;
+    background-color:transparent;
     /* justify-content:flex-end; */
 }
 
@@ -66,7 +66,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 
 .nav-link {
     opacity:.75;
-    color:white !important;
+    color:white;
     margin: 0px 18px;
 }
 .nav-link:hover{
