@@ -46,7 +46,7 @@ export default class Navigation extends Component {
       <div>
          <Navbar expand="lg">
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Brand href="#home"> Millie
+  <Navbar.Brand href="/"> Millie
     {/* <Image src={logo} width="300px"></Image> */}
   </Navbar.Brand>
   <Navbar.Collapse id="basic-navbar-nav">

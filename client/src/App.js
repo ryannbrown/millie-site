@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import Navigation from "./components/Navigation/index"
 // import Homepage from "./pages/Homepage/index"
-import doodle from "./media/doodle.png"
+import doodle from "./media/doodle.jpg"
 import Homepage from "./pages/Homepage/index"
 import WorksDetails from "./pages/WorksDetails/index"
 // import BlogPost from "./pages/BlogPost/index.js"
@@ -30,58 +30,58 @@ function App() {
     {
       image: doodle,
       id: 0,
-      title: 'Small Doodles.',
+      title: 'Happy Day',
       price: '50',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br></br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 1,
       title: 'Small Doodles.',
       price: '200',
-      description: 'This session is designed for introspection as we become sensitive to the present. I have a variety of sessions that I can lead you through, whether it is through the art of becoming noone, or using matras.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 2,
-      title: 'Small Doodles.',
+      title: 'Big Doodles.',
       price: '400',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 3,
-      title: 'Small Doodles.',
+      title: 'Medium Doodles.',
       price: '1,000',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 4,
-      title: 'Small Doodles.',
+      title: 'Ok Doodles.',
       price: '50',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 5,
-      title: 'Small Doodles.',
+      title: 'Those doodes',
       price: '200',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 6,
-      title: 'Small Doodles',
+      title: 'hey Doodles',
       price: '400',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 7,
-      title: 'Small Doodles.',
+      title: 'hi Doodles.',
       price: '1,000',
-      description: 'Here is a brief description as to why this package would be dope and that you should probably buy this damn thing.'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
   ]
 

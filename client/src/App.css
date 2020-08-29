@@ -4,15 +4,9 @@
 } */
 
 * {
-  font-family: 'adelle';
+  font-family: 'canada-type-gibson', sans-serif;
 }
 
-
-.light {
-  font-family: 'adelle-ultrathin';
-font-weight: 100;
-font-style: normal;
-}
 
 .App {
   text-align: center;
@@ -20,8 +14,7 @@ font-style: normal;
 }
 
 h1, h2 {
-/* font-family: 'adelle'; */
-  /* font-family: serif; */
+font-weight:400;
 }
 
 h1 {
@@ -29,8 +22,7 @@ h1 {
 }
 
 p, li, h3, h4, h5, a, button {
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: adelle, serif; */
+font-weight:200;
   letter-spacing:.1rem
 }
 
