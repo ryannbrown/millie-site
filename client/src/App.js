@@ -12,6 +12,13 @@ import {
 import Navigation from "./components/Navigation/index"
 // import Homepage from "./pages/Homepage/index"
 import doodle from "./media/doodle.jpg"
+import book from "./media/book.jpg"
+import candle from "./media/candle.jpg"
+import penplane from "./media/penplane.jpg"
+import pen from "./media/pen.jpg"
+import ship from "./media/ship.JPG"
+import standingPen from "./media/standingpen.jpg"
+import woman from "./media/woman.JPG"
 import Homepage from "./pages/Homepage/index"
 import WorksDetails from "./pages/WorksDetails/index"
 // import BlogPost from "./pages/BlogPost/index.js"
@@ -30,57 +37,100 @@ function App() {
     {
       image: doodle,
       id: 0,
-      title: 'Happy Day',
-      price: '50',
+      title: 'Small Doodles',
+      additionalPics: [
+        {
+          addPic: penplane
+        },
+        {
+          addPic: candle
+        },
+        {
+          addPic: book
+        },
+        {
+          addPic: pen
+        },
+        {
+          addPic: standingPen
+        },
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br></br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-      image: doodle,
+      image: ship,
       id: 1,
-      title: 'Small Doodles.',
-      price: '200',
+      title: "I'm on a boat",
+      additionalPics: [
+        {
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-      image: doodle,
+      image: woman,
       id: 2,
       title: 'Big Doodles.',
-      price: '400',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 3,
       title: 'Medium Doodles.',
-      price: '1,000',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 4,
       title: 'Ok Doodles.',
-      price: '50',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 5,
       title: 'Those doodes',
-      price: '200',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 6,
       title: 'hey Doodles',
-      price: '400',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
       image: doodle,
       id: 7,
       title: 'hi Doodles.',
-      price: '1,000',
+      additionalPics: [
+        {
+
+        }
+      ],
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
   ]

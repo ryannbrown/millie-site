@@ -25,10 +25,18 @@ a:hover{
 .works-container{
     text-align:left;
     padding:150px;
-    height:100vh;
+    /* height:100vh; */
 }
 
 .off-image {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    /* float: left; */
+}  
+.off-image-2 {
+    margin-top:10%;
+    margin-right:5%;
     width: 100%;
     max-width: 700px;
     text-align: left;

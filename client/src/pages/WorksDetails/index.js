@@ -56,6 +56,17 @@ export default class WorksDetails extends Component {
         const thisModal = this.props.worksObject[chosenWork];
         const nextModal = this.props.worksObject[Number(chosenWork) + 1];
 
+        if (thisModal) {
+            console.log(thisModal.additionalPics);
+            var addPics = thisModal.additionalPics.map((item, i) =>
+            <Image className="off-image-2" src={item.addPic} />
+            )
+        }
+
+            
+
+
+
         return (
             <div>
                <Navigation logo={logo} color="#FF8686"/>
@@ -70,9 +81,11 @@ export default class WorksDetails extends Component {
                         <p className="modal-description">{thisModal.description}
                         </p>
                     </div>
+                    {addPics}
                 </div>
                 ) : (<div></div>)
                 }
+               
                 <div className="nav-box">
                     <div>
                         <a href="/">Back to Work</a>
