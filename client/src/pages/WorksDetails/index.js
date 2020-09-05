@@ -41,6 +41,8 @@ export default class WorksDetails extends Component {
     console.log(this.props.match.params);
     let param = Object.values(this.props.match.params);
     console.log(param);
+
+    
     this.setState({
       chosenWork: param,
     });
@@ -56,13 +58,20 @@ export default class WorksDetails extends Component {
     const prevModal = this.props.worksObject[Number(chosenWork) - 1];
     const thisModal = this.props.worksObject[chosenWork];
     const nextModal = this.props.worksObject[Number(chosenWork) + 1];
+console.log(prevModal)
 
-    if (thisModal) {
-      console.log(thisModal.additionalPics);
-      var addPics = thisModal.additionalPics.map((item, i) => (
-        <Image className="off-image-2" src={item.addPic} />
-      ));
-    }
+if (prevModal) {
+    var prevId = Number(chosenWork) - 1
+}
+if (nextModal) {
+    var nextId = Number(chosenWork) + 1
+}
+    // if (thisModal) {
+    //   console.log(thisModal.additionalPics);
+    //   var addPics = thisModal.additionalPics.map((item, i) => (
+    //     <Image className="off-image-2" src={item.addPic} />
+    //   ));
+    // }
 
     return (
       <div>
@@ -77,7 +86,7 @@ export default class WorksDetails extends Component {
                   <div className="off-image-container">
                     <Image
                       className="off-image img-responsive"
-                      src={thisModal.image}
+                      src={`https://millie-site.s3.amazonaws.com/${thisModal.image}`}
                     />
                   </div>
                 </Col>
@@ -95,16 +104,16 @@ export default class WorksDetails extends Component {
           ) : (
             <div></div>
           )}
-          <div className="additional-pics">{addPics}</div>
+          {/* <div className="additional-pics">{addPics}</div> */}
 
           <div className="nav-box">
             <div>
               <a href="/">Back to Work</a>
             </div>
             <div>
-              {prevModal && <a href={`/works/${prevModal.id}`}>previous</a>}
+              {prevModal && <a href={`/works/${prevId}`}>previous</a>}
               {prevModal && nextModal && <span> | </span>}
-              {nextModal && <a href={`/works/${nextModal.id}`}>next</a>}
+              {nextModal && <a href={`/works/${nextId}`}>next</a>}
             </div>
           </div>
         </div>

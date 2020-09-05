@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
@@ -30,10 +30,28 @@ import Admin from "./pages/Admin/index.js"
 // import Contact from "./components/Contact/index"
 import createHistory from 'history/createBrowserHistory';
 
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      worksObject: []
+    };
+    // this.handler = this.handler.bind(this);
+  }
 
-function App() {
 
-
+  fetchPosts() {
+    fetch(`/api/getWorks/`)
+      .then((res) => res.json())
+      .then((json) => {
+        console.log("json", json);
+        this.setState({
+          worksObject: json.data,
+        });
+      });
+  }
+  
+componentDidMount() {
   let worksObject = [
     {
       image: doodle,
@@ -135,15 +153,25 @@ function App() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
   ]
+this.fetchPosts();
 
-  const history = createHistory({
-    basename: process.env.PUBLIC_URL,
-  });
+
+  // const history = createHistory({
+  //   basename: process.env.PUBLIC_URL,
+  // });
+
+}
+ 
+  render() {
+
+    const {worksObject} = this.state;
 
   return (
     <div className="App">
       {/* <Navigation /> */}
-      <Router history={history}>
+      <Router
+      //  history={history}
+       >
         <Switch>
           <Route path="/admin" component={Admin}/>
           <Route path="/works/:id" render={(props) => <WorksDetails {...props} worksObject={worksObject} title={`Props through render`} />} />
@@ -153,8 +181,9 @@ function App() {
       {/* <Footer></Footer> */}
 
     </div>
-
   );
 }
+}
+
 
 export default App;

@@ -33,11 +33,11 @@
 
 .delete-icon:hover {
     cursor: pointer;
-    color: #7C5454;
+    color: rgb(255, 134, 134);
 }
 .edit-icon:hover {
     cursor: pointer;
-    color:#7C5454;
+    color:rgb(255, 134, 134);
 }
 
 .post-body {
