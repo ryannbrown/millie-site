@@ -6,7 +6,6 @@
   max-width: 50vw;
   margin: 0px auto;
 }
-
 a {
   color: #ff8686;
 }
@@ -19,8 +18,8 @@ a:hover {
 
 .works-container {
   text-align: left;
-  padding: 150px;
-  /* height:100vh; */
+  padding: 10%;
+  min-height: 100vh;
 }
 
 .off-image {
@@ -39,10 +38,7 @@ a:hover {
 }
 
 .works-description {
-  padding: 50px;
-  margin-right: 10%;
-  width: 40%;
-  float: right;
+  padding: 25px;
 }
 
 .works-title {
@@ -52,4 +48,35 @@ a:hover {
 
 .modal-description {
   color: #8b8b8b;
+}
+
+.off-image-container {
+  display: inline-block;
+}
+
+.additional-pics {
+  /* margin: 5%; */
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media(max-width: 997px) {
+  .additional-pics {
+    padding:15%;
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 667px) {
+  .works-description {
+    margin: 25% auto;
+    padding: 5px;
+  }
+
+  .additional-pics {
+    margin-left: 0%;
+ 
+  }
 }
