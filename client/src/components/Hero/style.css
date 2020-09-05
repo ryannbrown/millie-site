@@ -22,3 +22,14 @@
     left:50%;
     margin-left:-250px;
 }
+
+
+
+@media (max-width: 667px) {
+    .centered-logo {
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        margin-left: -125px;
+    }
+  }

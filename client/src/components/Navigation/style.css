@@ -35,6 +35,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     justify-content: flex-end;
     display: flex;
     position: fixed;
+    flex-direction:row;
 }
 .nav {
 

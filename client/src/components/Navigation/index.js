@@ -46,18 +46,18 @@ export default class Navigation extends Component {
   
       <div>
          <Navbar expand="lg">
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
   <Navbar.Brand href="/"> 
     <Image src={this.props.logo} width="100px"></Image>
   </Navbar.Brand>
-  <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="">
       <Nav.Link style={{color:`${this.props.color}`}} href="/">Works</Nav.Link>
       <Nav.Link style={{color:`${this.props.color}`}} href="/about">About</Nav.Link>
 
       
     </Nav>
-  </Navbar.Collapse>
+  {/* <Navbar.Collapse id="basic-navbar-nav">
+  </Navbar.Collapse> */}
 </Navbar>
      
       </div >
