@@ -21,6 +21,7 @@ import standingPen from "./media/standingpen.jpg"
 import woman from "./media/woman.JPG"
 import Homepage from "./pages/Homepage/index"
 import WorksDetails from "./pages/WorksDetails/index"
+import Admin from "./pages/Admin/index.js"
 // import BlogPost from "./pages/BlogPost/index.js"
 // import Footer from "./components/Footer/index.js"
 // import Portfolio from "./components/Portfolio/index"
@@ -144,7 +145,7 @@ function App() {
       {/* <Navigation /> */}
       <Router history={history}>
         <Switch>
-          {/* <Route path="/" component={Offerings}/> */}
+          <Route path="/admin" component={Admin}/>
           <Route path="/works/:id" render={(props) => <WorksDetails {...props} worksObject={worksObject} title={`Props through render`} />} />
           <Route exact path="/" render={(props) => <Homepage {...props} worksObject={worksObject} title={`Props through render`} />} />
         </Switch>

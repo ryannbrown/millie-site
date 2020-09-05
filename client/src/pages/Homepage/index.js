@@ -25,6 +25,25 @@ export default class Homepage extends Component {
     }
 
 
+    fetchPosts() {
+        fetch('/api/posts')
+            .then(res => res.json())
+            .then(json => {
+                console.log("json", json.data)
+                this.setState({
+                    posts: json.data
+                })
+            })
+    }
+
+
+    componentDidMount() {
+
+        this.fetchPosts();
+
+    }
+
+
 
 
     render() {
