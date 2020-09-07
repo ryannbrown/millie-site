@@ -49,7 +49,7 @@ app.get("/api/getWork/:id", cors(), function (req, response) {
   knex
     .select()
     .from("works")
-    .returning("*")
+    .returning("*").where('id', id)
     .then((data) => {
       response.send(JSON.stringify({ data }));
     });

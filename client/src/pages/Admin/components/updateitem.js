@@ -10,6 +10,8 @@ import {
 import Form from "react-bootstrap/Form";
 import AdminPanel from "../components/panel";
 import Panel from "./panel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 require("dotenv").config();
 
 class UpdateItem extends Component {
@@ -22,7 +24,7 @@ class UpdateItem extends Component {
       itemUpdated: false,
       file: null,
       postData: [],
-      addImgSaved: false
+      addImgSaved: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
@@ -96,7 +98,7 @@ class UpdateItem extends Component {
     event.preventDefault();
     // let img = this.img.current.value;
     let id = this.props.id;
-    console.log(this.props)
+    console.log(this.props);
     // console.log(date);
 
     const filename = this.state.file[0].name;
@@ -125,7 +127,7 @@ class UpdateItem extends Component {
         },
         body: JSON.stringify({
           image: filename,
-          id: id
+          id: id,
         }),
       }).then((response) => {
         console.log("hey i did it");
@@ -138,13 +140,21 @@ class UpdateItem extends Component {
       });
     };
     postItem();
-  }
-
-
-
+  };
 
   render() {
     const { itemUpdated, postData, addImgSaved } = this.state;
+
+    console.log(postData)
+
+    // const addImages = postData.imgs.map((item, i) => (
+    //   <div>
+    //     <li>{item}</li>
+    //     <span>
+    //       <FontAwesomeIcon icon={faTrash} />
+    //     </span>
+    //   </div>
+    // ));
 
     if (!itemUpdated) {
       return (
@@ -158,12 +168,12 @@ class UpdateItem extends Component {
                 type="file"
               />
               <Button
-              style={{ backgroundColor: "rgb(255, 134, 134)" }}
-              variant="dark"
-              type="submit"
-            >
-              Save Image
-            </Button>
+                style={{ backgroundColor: "rgb(255, 134, 134)" }}
+                variant="dark"
+                type="submit"
+              >
+                Save Image
+              </Button>
             </form>
             {addImgSaved && <h1>Image Saved</h1>}
           </div>
