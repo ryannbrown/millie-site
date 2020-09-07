@@ -217,25 +217,31 @@ class Panel extends Component {
       return <AddItem />;
     }
 
-    if (this.state.posts.length === 0) {
-      return (
-        <div className="text-center m-5">
-          <Button
-            style={{ backgroundColor: "rgb(255, 134, 134)", marginTop: `25%` }}
-            variant="dark"
-            onClick={this.addItem}
-          >
-            Add Item
-          </Button>
-          <div className="mt-5">Blog Posts:</div>
-          <div className="mt-3">{placeholderText}</div>
-        </div>
-      );
-    }
+    // if (this.state.posts.length === 0) {
+    //   return (
+    //     <div className="text-center m-5">
+    //       <Button
+    //         style={{ backgroundColor: "rgb(255, 134, 134)", marginTop: `25%` }}
+    //         variant="dark"
+    //         onClick={this.addItem}
+    //       >
+    //         Add Item
+    //       </Button>
+    //       <div className="mt-5">Blog Posts:</div>
+    //       <div className="mt-3">{placeholderText}</div>
+    //     </div>
+    //   );
+    // }
 
     if (!createSession) {
       return (
         <div className="text-center m-5">
+            <a href="/"> <Button
+            style={{ backgroundColor: "rgb(255, 134, 134)", marginTop: `5%` }}
+            variant="dark">
+                  Return to Homepage
+          </Button></a>
+          
           {/* <i onClick={this.refreshFeed} style={{display: 'block'}} className="mt-3">refresh</i> */}
           <h1 className="ma5 lorem">WORKS</h1>
           <CardDeck>{posts}</CardDeck>

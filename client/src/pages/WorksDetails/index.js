@@ -19,6 +19,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // const queryString = require('query-string');
 import Navigation from "../../components/Navigation";
 import logo from "../../media/millie-logo-colored.png";
+import whiteLogo from "../../media/white-logo.png";
+import pinkLogo from "../../media/millie-logo-colored.png";
 require("dotenv").config();
 
 export default class WorksDetails extends Component {
@@ -58,7 +60,9 @@ export default class WorksDetails extends Component {
     const prevModal = this.props.worksObject[Number(chosenWork) - 1];
     const thisModal = this.props.worksObject[chosenWork];
     const nextModal = this.props.worksObject[Number(chosenWork) + 1];
-console.log(prevModal)
+console.log("previous", prevModal)
+console.log("this", thisModal)
+console.log("next", nextModal)
 
 if (prevModal) {
     var prevId = Number(chosenWork) - 1
@@ -66,16 +70,21 @@ if (prevModal) {
 if (nextModal) {
     var nextId = Number(chosenWork) + 1
 }
-    // if (thisModal) {
-    //   console.log(thisModal.additionalPics);
-    //   var addPics = thisModal.additionalPics.map((item, i) => (
-    //     <Image className="off-image-2" src={item.addPic} />
-    //   ));
-    // }
+    if (thisModal && thisModal.imgs) {
+      var addPics = thisModal.imgs.map((item, i) => (
+        <Image className="off-image-2" src={`https://millie-site.s3.amazonaws.com/${item}`} />
+      ));
+    }
 
     return (
       <div>
-        <Navigation logo={logo} color="#FF8686" />
+         <Navigation
+          color="#FF8686"
+          scrolledBgColor="#FF8686"
+          scrolledColor="white"
+          scrolledLogo={whiteLogo}
+          logo={pinkLogo}
+        />
 
         <div className="works-page">
           {thisModal ? (
@@ -104,7 +113,7 @@ if (nextModal) {
           ) : (
             <div></div>
           )}
-          {/* <div className="additional-pics">{addPics}</div> */}
+          <div className="additional-pics">{addPics}</div>
 
           <div className="nav-box">
             <div>
