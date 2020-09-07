@@ -25,6 +25,7 @@ class UpdateItem extends Component {
       file: null,
       postData: [],
       addImgSaved: false,
+      imageDeleted: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
@@ -35,7 +36,13 @@ class UpdateItem extends Component {
   componentDidMount() {
     console.log("id:", this.props.id);
 
-    fetch(`/api/getWork/${this.props.id}`)
+    this.fetchPosts();
+  }
+
+fetchPosts() {
+
+
+  fetch(`/api/getWork/${this.props.id}`)
       .then((res) => res.json())
       .then((json) => {
         console.log("inventory", json.data[0]);
@@ -46,7 +53,8 @@ class UpdateItem extends Component {
         var size = Object.keys(this.state.postData).length;
         console.log(size);
       });
-  }
+    }
+
 
   fileChanged(event) {
     console.log(event);
@@ -60,6 +68,38 @@ class UpdateItem extends Component {
         console.log(this.state);
       }
     );
+    this.handleImages(f);
+  }
+
+  deleteAddImg = (filename) => {
+
+    let id = this.props.id;
+    const postItem = () => {
+        console.log("deleting img");
+        // POST TO DB
+        fetch("/api/deleteImg", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            image: filename,
+            id: id,
+          }),
+        }).then((response) => {
+          console.log("image deleted!");
+          console.log(response);
+          if (response.status == "200") {
+            this.setState({
+              imageDeleted: true,
+            });
+            this.fetchPosts();
+          }
+        });
+      };
+      postItem();
+
   }
 
   handleSubmit(event) {
@@ -94,17 +134,17 @@ class UpdateItem extends Component {
     postItem();
   }
 
-  handleImages = (event) => {
-    event.preventDefault();
+  handleImages = (f) => {
+    // event.preventDefault();
     // let img = this.img.current.value;
     let id = this.props.id;
     console.log(this.props);
-    // console.log(date);
+    // console.log(filename[0].file.name);
 
-    const filename = this.state.file[0].name;
-
+    const filename = f[0].name;
+console.log(filename)
     const thisFormData = new FormData();
-    thisFormData.append("element1", this.state.file[0]);
+    thisFormData.append("element1", f[0]);
     var requestOptions = {
       method: "POST",
       body: thisFormData,
@@ -136,6 +176,7 @@ class UpdateItem extends Component {
           this.setState({
             addImgSaved: true,
           });
+          this.fetchPosts();
         }
       });
     };
@@ -143,18 +184,22 @@ class UpdateItem extends Component {
   };
 
   render() {
-    const { itemUpdated, postData, addImgSaved } = this.state;
+    const { itemUpdated, postData, addImgSaved, imageDeleted } = this.state;
 
     console.log(postData)
 
-    // const addImages = postData.imgs.map((item, i) => (
-    //   <div>
-    //     <li>{item}</li>
-    //     <span>
-    //       <FontAwesomeIcon icon={faTrash} />
-    //     </span>
-    //   </div>
-    // ));
+    if (postData.imgs) {
+        var addImages = postData.imgs.map((item, i) => (
+            <div className="additional-images">
+              <p>{item}</p>
+              <img width='100px' src={`https://millie-site.s3.amazonaws.com/${item}`}></img>
+              <span>
+                <FontAwesomeIcon onClick={() => {this.deleteAddImg(item)}} icon={faTrash} />
+              </span>
+            </div>
+          ));
+    }
+  
 
     if (!itemUpdated) {
       return (
@@ -167,16 +212,19 @@ class UpdateItem extends Component {
                 ref={this.img}
                 type="file"
               />
-              <Button
+              {/* <Button
                 style={{ backgroundColor: "rgb(255, 134, 134)" }}
                 variant="dark"
                 type="submit"
               >
                 Save Image
-              </Button>
+              </Button> */}
             </form>
-            {addImgSaved && <h1>Image Saved</h1>}
           </div>
+          {postData.imgs && <div>
+              <p>Additional Images:</p>
+              {addImages}
+              </div>}
           <h1>Update Item</h1>
           <form onSubmit={this.handleSubmit} encType="multipart/form-data">
             <Form.Label>Item Image</Form.Label>

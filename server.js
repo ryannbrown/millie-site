@@ -90,6 +90,15 @@ app.post("/api/addImg", function (req, res) {
     })
     .then(res.send("POST request to the homepage"));
 });
+app.post("/api/deleteImg", function (req, res) {
+  const { id, image } = req.body;
+  knex("works")
+    .where("id", id)
+    .update({
+      imgs: knex.raw("array_remove(imgs, ?)", [image]),
+    })
+    .then(res.send("POST request to the homepage"));
+});
 
 app.delete("/api/deleteWork", function (req, response) {
   // console.log("hiiiii")

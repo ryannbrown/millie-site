@@ -58,3 +58,8 @@
     z-index: 2500;
     left: 40%;
 }
+
+.additional-images {
+    display:inline-block;
+    padding:25px;
+}
