@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 // import HomeHero from "../../components/HomeHero/index"
 import './style.css';
 import arrow from "../../media/white-arrow.png"
+import backgroundWoman from "../../media/background-woman.JPG"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
 
@@ -57,10 +58,10 @@ export default class Hero extends Component {
         {/* <Col md={3}></Col> */}
 
         <Col sm={12} md={12} className="home-img" style={{
-            backgroundImage: `url(${this.props.image})`,
+            backgroundImage: `url(${backgroundWoman})`,
             backgroundColor: `#FF8686`,
             opacity: `90%`,
-            backgroundBlendMode: `multiply`,
+            backgroundBlendMode: `lighten`,
             backgroundPosition: `center`,
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,

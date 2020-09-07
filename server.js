@@ -38,7 +38,7 @@ app.get("/api/getWorks", cors(), function (req, response) {
   knex
     .select()
     .from("works")
-    .returning("*")
+    .returning("*").orderBy('id')
     .then((data) => {
       response.send(JSON.stringify({ data }));
     });
