@@ -102,3 +102,23 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 } */
 
 
+
+
+@media (max-width:997px) {
+    .navbar-nav {
+        width: 100%;
+        justify-content: center;
+        position: fixed;
+        flex-direction: row;
+        margin-top:-10%;
+    }
+    .navbar-brand {
+        width: 100%;
+        margin-top: 25px;
+        padding-left: 3rem;
+        margin: 10% 10% -10px 0%;
+    }
+    .works-container {
+        padding: 20% 10%;
+    }
+}
