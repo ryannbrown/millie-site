@@ -35,7 +35,7 @@ export default class WorksDetails extends Component {
     console.log("Adding spaces");
     $(".modal-description").each(function () {
       var text = $(this).text();
-      $(this).html(text.replace(/\*/g, "<br></br>"));
+      $(this).html(text.replace(/\*/g, "<br><br>"));
     });
   };
 

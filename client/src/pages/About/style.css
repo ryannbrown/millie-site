@@ -1,0 +1,49 @@
+
+
+/* .about-page .navbar {
+    position:inherit;
+} */
+.white-block {
+    /* margin-top:10vh; */
+    height:75vh;
+}
+.pink-block {
+    height:75vh;
+    background-color:#FFEEEE;
+}
+
+.img-container .about-img {
+    /* position:absolute; */
+    /* margin-left:-200px; */
+    
+}
+
+.about-greeting {
+    text-align:left;
+    color:#FF8686;
+    position: absolute;
+    bottom: -35%;
+    /* left: 50%;
+    width: 100%;
+    margin-left: -50%; */
+}
+
+.about-greeting h1 {
+    width:50%;
+    margin:0px auto;
+}
+
+.about-greeting p {
+    width:50%;
+    margin:0px auto;
+    
+}
+
+.about-contact {
+    margin-top:25%;
+    text-align:center;
+    color:#FF8686;
+    /* position: absolute; */
+    /* bottom: -35%; */
+    line-height:5rem;
+}
