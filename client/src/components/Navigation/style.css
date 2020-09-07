@@ -61,6 +61,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     position:fixed;
     background-color:transparent;
     font-weight:400;
+    padding:1.5rem 1rem;
 }
 
 
@@ -120,5 +121,8 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     }
     .works-container {
         padding: 20% 10%;
+    }
+    .navbar-brand img {
+        padding:10px;
     }
 }
