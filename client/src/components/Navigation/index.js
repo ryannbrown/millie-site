@@ -31,7 +31,7 @@ export default class Navigation extends Component {
 
     this.listener = document.addEventListener("scroll", (e) => {
       var scrolled = document.scrollingElement.scrollTop;
-      if (scrolled >= 120) {
+      if (scrolled >= this.props.scrollDistance) {
         if (this.state.status !== "bgChanged") {
           this.setState({ status: "bgChanged" });
         }

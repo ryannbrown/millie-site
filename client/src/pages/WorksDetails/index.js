@@ -84,6 +84,7 @@ if (nextModal) {
           scrolledColor="white"
           scrolledLogo={whiteLogo}
           logo={pinkLogo}
+          scrollDistance="1"
         />
 
         <div className="works-page">

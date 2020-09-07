@@ -47,6 +47,7 @@ export default class Homepage extends Component {
           scrolledColor="rgb(255, 134, 134)"
           logo={whiteLogo}
           scrolledLogo={pinkLogo}
+          scrollDistance="120"
         />
         <Hero logo={whiteLogo} worksObject={this.props.worksObject}></Hero>
         <Works worksObject={this.props.worksObject}></Works>
