@@ -35,8 +35,9 @@ var knex = require("knex")({
 
 // GET CUSTOM INVENTORY
 app.get("/api/getWorks", cors(), function (req, response) {
-  knex.select()
-    .from("test")
+  knex
+    .select()
+    .from("works")
     .returning("*")
     .then((data) => {
       response.send(JSON.stringify({ data }));
@@ -44,9 +45,10 @@ app.get("/api/getWorks", cors(), function (req, response) {
 });
 // GET CUSTOM INVENTORY
 app.get("/api/getWork/:id", cors(), function (req, response) {
-  const { id } = req.params
-  knex.select()
-    .from("test")
+  const { id } = req.params;
+  knex
+    .select()
+    .from("works")
     .returning("*")
     .then((data) => {
       response.send(JSON.stringify({ data }));
@@ -55,12 +57,12 @@ app.get("/api/getWork/:id", cors(), function (req, response) {
 
 app.post("/api/addWork", function (req, res) {
   const { title, body, image } = req.body;
-  knex("test")
+  knex("works")
     .insert({
       date: new Date(),
       title: title,
       description: body,
-      image: image
+      image: image,
       // order:
     })
     .then(res.send("POST request to the homepage"));
@@ -69,74 +71,80 @@ app.post("/api/addWork", function (req, res) {
 });
 app.post("/api/updateWork", function (req, res) {
   const { id, title, body } = req.body;
-  knex('test')
-  .where('id', id)
-  .update({
+  knex("works")
+    .where("id", id)
+    .update({
       title: title,
       description: body,
-  })
+    })
     .then(res.send("POST request to the homepage"));
 
   // posts.push(data)
 });
+app.post("/api/addImg", function (req, res) {
+  const { id, image } = req.body;
+  knex("works")
+    .where("id", id)
+    .update({
+      imgs: knex.raw("array_append(imgs, ?)", [image]),
+    })
+    .then(res.send("POST request to the homepage"));
+});
 
-app.delete('/api/deleteWork', function (req, response) {
+app.delete("/api/deleteWork", function (req, response) {
   // console.log("hiiiii")
   const id = req.body.id;
   // console.log(id)
   console.log(id);
-  knex("test").where('id', id).del().then(response.send('deleted item'))
-})
-
+  knex("works").where("id", id).del().then(response.send("deleted item"));
+});
 
 const BUCKET_NAME = process.env.NAME;
-    const ACCESS = process.env.ACCESS
-    const SECRET = process.env.SECRET
-    
-    // TODO: be able to remove pictures from S3 programmatically? 
-    function uploadToS3(file) {
-      let s3bucket = new AWS.S3({
-        accessKeyId: ACCESS,
-        secretAccessKey: SECRET,
-        Bucket: BUCKET_NAME
-      });
-      s3bucket.createBucket(function () {
-        var params = {
-          Bucket: BUCKET_NAME,
-          Key: file.name,
-          Body: file.data
-        };
-        s3bucket.upload(params, function (err, data) {
-          if (err) {
-            console.log('error in callback');
-            console.log(err);
-          }
-          console.log('success');
-          console.log(data);
-        });
-      });
-    }
-    
-    app.post('/api/upload', function (req, res, next) {
-    
-      console.log("body", req.body)
-      // console.log("req", req)
-      const element1 = req.body.element1;
-      console.log(element1)
-      var busboy = new Busboy({ headers: req.headers });
-    
-      // The file upload has completed
-      busboy.on('finish', function () {
-        console.log('Upload finished');
-        const file = req.files.element1;
-        console.log(file);
-    
-        uploadToS3(file);
-      });
-    
-      req.pipe(busboy);
+const ACCESS = process.env.ACCESS;
+const SECRET = process.env.SECRET;
+
+// TODO: be able to remove pictures from S3 programmatically?
+function uploadToS3(file) {
+  let s3bucket = new AWS.S3({
+    accessKeyId: ACCESS,
+    secretAccessKey: SECRET,
+    Bucket: BUCKET_NAME,
+  });
+  s3bucket.createBucket(function () {
+    var params = {
+      Bucket: BUCKET_NAME,
+      Key: file.name,
+      Body: file.data,
+    };
+    s3bucket.upload(params, function (err, data) {
+      if (err) {
+        console.log("error in callback");
+        console.log(err);
+      }
+      console.log("success");
+      console.log(data);
     });
-    
+  });
+}
+
+app.post("/api/upload", function (req, res, next) {
+  console.log("body", req.body);
+  // console.log("req", req)
+  const element1 = req.body.element1;
+  console.log(element1);
+  var busboy = new Busboy({ headers: req.headers });
+
+  // The file upload has completed
+  busboy.on("finish", function () {
+    console.log("Upload finished");
+    const file = req.files.element1;
+    console.log(file);
+
+    uploadToS3(file);
+  });
+
+  req.pipe(busboy);
+});
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
