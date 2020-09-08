@@ -88,15 +88,14 @@ export default class About extends Component {
           <div className="about-contact">
               <h1>Feel free to reach out!</h1>
               <p>
-              Contact me anytime, just shoot me an email at:
-illustrations@gmail.com
+              Contact me anytime, just shoot me an email at: <span>illustrations@gmail.com</span>
               </p>
               <p>
-              Follow on Instagram: @instagram
-Facebook: @facebook
+              Follow on Instagram: <span>@instagram </span>
+Facebook: <span>@facebook</span>
               </p>
               <p>
-              To download my resume, click the link! Millie.pdf
+              To download my resume, click the link! <span>Millie.pdf</span>
               </p>
             </div>
           </div>

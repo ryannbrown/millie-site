@@ -22,28 +22,166 @@
     text-align:left;
     color:#FF8686;
     position: absolute;
-    bottom: -35%;
+    /* bottom: -40%; */
     /* left: 50%;
     width: 100%;
     margin-left: -50%; */
 }
 
-.about-greeting h1 {
-    width:50%;
-    margin:0px auto;
-}
-
-.about-greeting p {
-    width:50%;
-    margin:0px auto;
-    
-}
-
 .about-contact {
+    
     margin-top:25%;
-    text-align:center;
+    text-align:left;
     color:#FF8686;
     /* position: absolute; */
     /* bottom: -35%; */
+    width:35%;
+    margin:15% auto 0% auto;
     line-height:5rem;
 }
+
+.about-contact h1 {
+    font-size:2.5rem;
+}
+
+.about-contact p {
+    color: #707070;
+}
+
+.about-contact span {
+    color: #FF8686;
+}
+
+@media (min-width:320px) and (max-width: 400px) {
+    .pink-block {
+        height:150vh;
+        background-color:#FFEEEE;
+    }
+    
+    .about-greeting {
+        bottom:-125%;
+       
+    }
+    .about-greeting h1 {
+        width:75%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:75%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+    .about-contact {
+        width:75%;
+        text-align:center;
+        line-height:2.5rem;
+    }
+}
+
+
+@media (min-width:400px) and (max-width:997px) {
+    .pink-block {
+        height:125vh;
+        background-color:#FFEEEE;
+    }
+    
+    .about-greeting {
+        bottom:-85%;
+       
+    }
+    .about-greeting h1 {
+        width:75%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:75%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+    .about-contact {
+        width:50%;
+        line-height:2.5rem;
+    }
+}
+@media (min-width:997px) {
+    .about-greeting {
+        bottom:-45%;
+       
+    }
+    .about-greeting h1 {
+        width:50%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:50%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+}
+@media (min-width:1050px) {
+    .about-greeting {
+        bottom:-40%;
+       
+    }
+    .about-greeting h1 {
+        width:50%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:50%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+}
+@media (min-width:1200px) {
+    .about-greeting {
+        bottom:-40%;
+       
+    }
+    .about-greeting h1 {
+        width:50%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:50%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+}
+@media (min-width:1450px) {
+    .about-greeting {
+        bottom:-40%;
+    }
+    .about-greeting h1 {
+        width:35%;
+        margin:5px auto;
+    }
+    
+    .about-greeting p {
+        width:35%;
+        margin:5px auto;
+        line-height:2rem;
+        
+    }
+}
+@media (min-width:1450px) {
+    .about-greeting {
+    }
+}
+@media (min-width:1450px) {
+    .about-greeting {
+    }
+}
+
+
+
