@@ -25,72 +25,60 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 */
 .navbar-brand {
-    margin-top:25px;
-   padding-left: 3rem;
-} 
+  margin-top: 25px;
+  padding-left: 3rem;
+}
 
-.navbar-nav{
-    margin-top:25px;
-    width: 85%;
-    justify-content: flex-end;
-    display: flex;
-    position: fixed;
-    flex-direction:row;
+.navbar-nav {
+  margin-top: 25px;
+  width: 95%;
+  justify-content: flex-end;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
 }
 .nav {
-
-    color:white;
-    background-color:transparent;
-    /* justify-content:flex-end; */
+  color: white;
+  background-color: transparent;
+  /* justify-content:flex-end; */
 }
 
 /* .navbar-light .navbar-nav {
     color:white;
 } */
 
-
-
-
 .justify-content-center.navbar-nav {
-    width: 100%;
+  width: 100%;
 }
-
 
 .navbar {
-    z-index:1050;
-    position:fixed;
-    background-color:transparent;
-    font-weight:400;
-    padding:1.5rem 1rem;
+  z-index: 1050;
+  position: fixed;
+  background-color: transparent;
+  font-weight: 400;
+  padding: 1.5rem 1rem;
 }
-
-
 
 .nav-link {
-    opacity:.75;
-    color:white;
-    margin: 0px 18px;
+  opacity: 0.5;
+  color: white;
+  margin: 0px 18px;
 }
-.nav-link:hover{
-    opacity:1;
-}
-
-
-.nav-arrow{
-    position:absolute;
-    right:25px;
-    top:40px;
-    width:25px;
+.nav-link:hover {
+  opacity: 1;
 }
 
-
-
+.nav-arrow {
+  position: absolute;
+  right: 25px;
+  top: 40px;
+  width: 25px;
+}
 
 .btn-primary {
-    border-color:transparent;
-    background-color:transparent;
+  border-color: transparent;
+  background-color: transparent;
 }
-
 
 /* @media (max-width:667px) {
     .justify-content-center.navbar-nav {
@@ -102,27 +90,24 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     }
 } */
 
-
-
-
-@media (max-width:997px) {
-    .navbar-nav {
-        width: 100%;
-        justify-content: center;
-        position: fixed;
-        flex-direction: row;
-        margin-top:-10%;
-    }
-    .navbar-brand {
-        width: 100%;
-        margin-top: 25px;
-        padding-left: 3rem;
-        margin: 10% 10% -10px 0%;
-    }
-    .works-container {
-        padding: 20% 10%;
-    }
-    .navbar-brand img {
-        padding:10px;
-    }
+@media (max-width: 997px) {
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    flex-direction: row;
+    margin-top: -10%;
+  }
+  .navbar-brand {
+    width: 100%;
+    margin-top: 25px;
+    padding-left: 3rem;
+    margin: 10% 10% -10px 0%;
+  }
+  .works-container {
+    padding: 20% 10%;
+  }
+  .navbar-brand img {
+    padding: 10px;
+  }
 }

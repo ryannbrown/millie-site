@@ -10,7 +10,7 @@ import {
   Accordion,
   Spinner,
   Row,
-  Col,
+  Col
 } from "react-bootstrap";
 import "./style.css";
 import $ from "jquery";
@@ -27,13 +27,13 @@ export default class WorksDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chosenWork: "",
+      chosenWork: ""
     };
   }
 
   addSpaces = () => {
     console.log("Adding spaces");
-    $(".modal-description").each(function () {
+    $(".modal-description").each(function() {
       var text = $(this).text();
       $(this).html(text.replace(/\*/g, "<br><br>"));
     });
@@ -44,9 +44,8 @@ export default class WorksDetails extends Component {
     let param = Object.values(this.props.match.params);
     console.log(param);
 
-    
     this.setState({
-      chosenWork: param,
+      chosenWork: param
     });
     // this.addSpaces();
   }
@@ -60,25 +59,28 @@ export default class WorksDetails extends Component {
     const prevModal = this.props.worksObject[Number(chosenWork) - 1];
     const thisModal = this.props.worksObject[chosenWork];
     const nextModal = this.props.worksObject[Number(chosenWork) + 1];
-console.log("previous", prevModal)
-console.log("this", thisModal)
-console.log("next", nextModal)
+    console.log("previous", prevModal);
+    console.log("this", thisModal);
+    console.log("next", nextModal);
 
-if (prevModal) {
-    var prevId = Number(chosenWork) - 1
-}
-if (nextModal) {
-    var nextId = Number(chosenWork) + 1
-}
+    if (prevModal) {
+      var prevId = Number(chosenWork) - 1;
+    }
+    if (nextModal) {
+      var nextId = Number(chosenWork) + 1;
+    }
     if (thisModal && thisModal.imgs) {
       var addPics = thisModal.imgs.map((item, i) => (
-        <Image className="off-image-2" src={`https://millie-site.s3.amazonaws.com/${item}`} />
+        <Image
+          className="off-image-2"
+          src={`https://millie-site.s3.amazonaws.com/${item}`}
+        />
       ));
     }
 
     return (
       <div>
-         <Navigation
+        <Navigation
           color="#FF8686"
           scrolledBgColor="#FF8686"
           scrolledColor="white"
@@ -91,8 +93,12 @@ if (nextModal) {
           {thisModal ? (
             <div className="works-container">
               <Row>
-                <Col xs={{ span: 12, order: 2}} sm={{ span: 12, order: 2}} md={{ span: 6, order: 
-                'first'}} lg={{ span: 6, order: 'first'}}>
+                <Col
+                  xs={{ span: 12, order: 2 }}
+                  sm={{ span: 12, order: 2 }}
+                  md={{ span: 6, order: "first" }}
+                  lg={{ span: 6, order: "first" }}
+                >
                   <div className="off-image-container">
                     <Image
                       className="off-image img-responsive"
@@ -101,8 +107,11 @@ if (nextModal) {
                   </div>
                 </Col>
                 <Col
-                 xs={{ span: 12, order: 'first'}} sm={{span:12, order: 'first'}} md={{ span: 6, order: 2}} lg={{ span: 6, order: 2}}
-                 >
+                  xs={{ span: 12, order: "first" }}
+                  sm={{ span: 12, order: "first" }}
+                  md={{ span: 6, order: 2 }}
+                  lg={{ span: 6, order: 2 }}
+                >
                   <div className="works-description">
                     <h1 className="works-title">{thisModal.title}</h1>
                     {/* <hr style={{ width: `50%` }}></hr> */}
