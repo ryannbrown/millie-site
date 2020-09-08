@@ -8,7 +8,7 @@ import "./style.css";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
 
-import mill from "../../media/millcropped.jpg";
+import mill from "../../media/mill-desktop.png";
 import { Hidden } from "@material-ui/core";
 
 export default class About extends Component {
@@ -44,7 +44,7 @@ export default class About extends Component {
               <div
                 className="about-img"
                 style={{
-                  backgroundImage: `linear-gradient(to top, transparent 75%, #ffffff ),url(${mill})`,
+                  backgroundImage: `url(${mill})`,
                   // backgroundColor: `#FF8686`,
                   // opacity: `90%`,
                   // backgroundBlendMode: `lighten`,
