@@ -90,7 +90,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     }
 } */
 
-@media (max-width: 997px) {
+@media (max-width: 667px) {
   .navbar-nav {
     width: 100%;
     justify-content: center;

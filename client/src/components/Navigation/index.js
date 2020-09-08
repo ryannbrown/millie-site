@@ -53,7 +53,6 @@ export default class Navigation extends Component {
     return (
       <div>
         <Navbar
-          expand="lg"
           style={{
             width: `100%`,
             backgroundColor:
