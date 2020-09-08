@@ -30,14 +30,18 @@ class UpdateItem extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
     this.body = React.createRef();
+ 
     // this.img = React.createRef();
   }
 
-  componentDidMount() {
+  componentDidMount = ()  =>{
     console.log("id:", this.props.id);
+ 
 
     this.fetchPosts();
   }
+
+
 
 fetchPosts() {
 
@@ -203,10 +207,10 @@ console.log(filename)
 
     if (!itemUpdated) {
       return (
-        <div className="m-5">
+        <div className="entry-form">
           <div className="additional-images">
-            <form onSubmit={this.handleImages} encType="multipart/form-data">
-              <Form.Label>Upload Additional Images</Form.Label>
+            <form onSubmit={this.handleImages} encType="multipart/form-data" style={{textAlign:`left`}}>
+              <Form.Label style={{display:`block`}}>Upload Additional Images</Form.Label>
               <input
                 onChange={this.fileChanged.bind(this)}
                 ref={this.img}
@@ -233,7 +237,8 @@ console.log(filename)
               <Form.Control
                 ref={this.title}
                 type="text"
-                placeholder="name of Work"
+                placeholder="Work Title"
+                required
               />
             </Form.Group>
             <Form.Group controlId="addForm">
@@ -242,7 +247,8 @@ console.log(filename)
                 ref={this.body}
                 as="textarea"
                 rows="5"
-                placeholder=" body of Work"
+                required
+                placeholder="Work Description"
               />
             </Form.Group>
             <Button

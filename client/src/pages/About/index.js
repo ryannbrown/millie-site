@@ -39,38 +39,40 @@ export default class About extends Component {
           scrollDistance="120"
         />
         <div className="about-content">
-          <div className="img-container">
-            <div
-              className="about-img"
-              style={{
-                backgroundImage: `linear-gradient(to top, transparent 75%, #ffffff ),url(${mill})`,
-                // backgroundColor: `#FF8686`,
-                // opacity: `90%`,
-                // backgroundBlendMode: `lighten`,
-                backgroundPosition: `center`,
-                position: `relative`,
-                overflow: `hidden`,
-                // backgroundSize: `cover`,
-                backgroundRepeat: `no-repeat`,
-                // backgroundAttachment: `fixed`,
-                height: `75vh`,
-                width: `100%`,
-                marginBottom: `-25%`,
-                position: 'absolute',
-                top:'35%'
-                // background: `linear-gradient(to top, transparent 10%, #ffffff )`
-                // display: `flex`,
-                // alignItems: `center`,
-                // position: `relative`
-                //   cover no-repeat center center fixed`
-              }}
-            >
-              {/* <Image className="about-img" width="400px" src={mill}></Image> */}
-              <Image className="about-logo" src={pinkLogo}></Image>
+          <div className="white-block">
+            <div className="img-container">
+              <div
+                className="about-img"
+                style={{
+                  backgroundImage: `linear-gradient(to top, transparent 75%, #ffffff ),url(${mill})`,
+                  // backgroundColor: `#FF8686`,
+                  // opacity: `90%`,
+                  // backgroundBlendMode: `lighten`,
+                  backgroundPosition: `center`,
+                  position: `relative`,
+                  overflow: `hidden`,
+                  // backgroundSize: `cover`,
+                  backgroundRepeat: `no-repeat`,
+                  // backgroundAttachment: `fixed`,
+                  height: `75vh`,
+                  width: `100%`,
+                  marginBottom: `-25%`,
+                  position: "absolute",
+                  top: "35%",
+                  // background: `linear-gradient(to top, transparent 10%, #ffffff )`
+                  // display: `flex`,
+                  // alignItems: `center`,
+                  // position: `relative`
+                  //   cover no-repeat center center fixed`
+                }}
+              >
+                {/* <Image className="about-img" width="400px" src={mill}></Image> */}
+                <Image className="about-logo" src={pinkLogo}></Image>
+              </div>
             </div>
           </div>
-          <div className="white-block"></div>
           <div className="pink-block">
+            <div className="narrow">
             <div className="about-greeting">
               <h1>Hi There!</h1>
               <p>
@@ -85,18 +87,20 @@ export default class About extends Component {
               </p>
             </div>
           </div>
+          </div>
           <div className="white-block">
-          <div className="about-contact">
+            <div className="about-contact">
               <h1>Feel free to reach out!</h1>
               <p>
-              Contact me anytime, just shoot me an email at: <span>illustrations@gmail.com</span>
+                Contact me anytime, just shoot me an email at:{" "}
+                <span>illustrations@gmail.com</span>
               </p>
               <p>
-              Follow on Instagram: <span>@instagram </span>
-Facebook: <span>@facebook</span>
+                Follow on Instagram: <span>@instagram </span>
+                Facebook: <span>@facebook</span>
               </p>
               <p>
-              To download my resume, click the link! <span>Millie.pdf</span>
+                To download my resume, click the link! <span>Millie.pdf</span>
               </p>
             </div>
           </div>

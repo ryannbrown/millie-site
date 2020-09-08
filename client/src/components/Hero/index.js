@@ -15,12 +15,12 @@ export default class Hero extends Component {
 
     this.listener = null;
     this.state = {
-      status: "top"
+      status: "top",
     };
   }
 
   componentDidMount() {
-    this.listener = document.addEventListener("scroll", e => {
+    this.listener = document.addEventListener("scroll", (e) => {
       var scrolled = document.scrollingElement.scrollTop;
       if (scrolled >= 120) {
         if (this.state.status !== "bgChanged") {
@@ -50,7 +50,7 @@ export default class Hero extends Component {
         <Col
           sm={12}
           md={12}
-          className="home-img img-overlay"
+          className="home-img"
           style={{
             backgroundImage: `url(${backgroundWoman})`,
             backgroundColor: `#FF8686`,
@@ -63,10 +63,11 @@ export default class Hero extends Component {
             height: `100vh`,
             display: `flex`,
             alignItems: `center`,
-            position: `relative`
+            position: `relative`,
             //   cover no-repeat center center fixed`
           }}
         >
+          <div className="img-overlay"></div>
           <Image className="centered-logo" src={this.props.logo}></Image>
           <div className=" hero-text-block">
             <h1 className="hero-header">{this.props.title}</h1>

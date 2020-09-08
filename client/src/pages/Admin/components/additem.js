@@ -100,7 +100,7 @@ class AddItem extends Component {
         const { itemPosted } = this.state;
         if (!itemPosted) {
             return (
-                <div className="m-5">
+                <div className="entry-form">
                     <h1>New Work</h1>
                     <form onSubmit={this.handleSubmit} encType="multipart/form-data" >
 
@@ -113,11 +113,11 @@ class AddItem extends Component {
 
                         <Form.Group controlId="addForm">
                             <Form.Label>Work Title</Form.Label>
-                            <Form.Control ref={this.title} type="text" placeholder="name of Work" />
+                            <Form.Control ref={this.title} type="text" placeholder="Work Title" />
                         </Form.Group>
                         <Form.Group controlId="addForm">
                             <Form.Label>Work Description</Form.Label>
-                            <Form.Control ref={this.body} as="textarea" rows="5" placeholder=" body of Work" />
+                            <Form.Control ref={this.body} as="textarea" rows="5" placeholder="Work Description" />
                         </Form.Group>
                         
                         

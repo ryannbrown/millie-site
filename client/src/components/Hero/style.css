@@ -32,3 +32,11 @@
         margin-left: -125px;
     }
   }
+
+
+  .img-overlay {
+height:100vh;
+background-color:#FF8686;
+opacity:.90;
+width:100%;
+  }
