@@ -14,7 +14,7 @@ class Admin extends Component {
         super(props);
         this.state = {
             data: [],
-            isLoggedIn: true,
+            isLoggedIn: false,
             catData: [],
             email: '',
             pass: ''
