@@ -107,7 +107,7 @@ export default class About extends Component {
               <h1>Feel free to reach out!</h1>
               <p>
                 Contact me anytime, just shoot me an email at:{" "}
-                <span>illustrations@gmail.com</span>
+                <span>Milliegogoi02@gmail.com</span>
               </p>
               <p>
                 Follow on Instagram: <span>@instagram </span>
