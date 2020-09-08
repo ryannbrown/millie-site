@@ -174,14 +174,45 @@
         
     }
 }
-@media (min-width:1450px) {
-    .about-greeting {
-    }
+
+
+.about-logo {
+    width:200px;
+    position:absolute;
+    right:25%;
 }
-@media (min-width:1450px) {
-    .about-greeting {
+
+@media (max-width:997px) {
+    .about-logo {
+       display:none;
     }
+    
 }
+@media (max-width:1300px) {
+    .about-logo {
+        width:200px;
+        position:absolute;
+        right:20%;
+    }
+    
+}
+@media (min-width:1600px) {
+    .about-logo {
+        width:200px;
+        position:absolute;
+        right:30%;
+    }
+    
+}
+@media (min-width:2000px) {
+    .about-logo {
+        width:200px;
+        position:absolute;
+        right:35%;
+    }
+    
+}
+
 
 
 

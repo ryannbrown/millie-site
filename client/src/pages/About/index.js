@@ -43,7 +43,7 @@ export default class About extends Component {
             <div
               className="about-img"
               style={{
-                backgroundImage: `url(${mill})`,
+                backgroundImage: `linear-gradient(to top, transparent 75%, #ffffff ),url(${mill})`,
                 // backgroundColor: `#FF8686`,
                 // opacity: `90%`,
                 // backgroundBlendMode: `lighten`,
@@ -66,6 +66,7 @@ export default class About extends Component {
               }}
             >
               {/* <Image className="about-img" width="400px" src={mill}></Image> */}
+              <Image className="about-logo" src={pinkLogo}></Image>
             </div>
           </div>
           <div className="white-block"></div>
