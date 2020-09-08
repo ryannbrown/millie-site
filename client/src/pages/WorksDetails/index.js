@@ -130,9 +130,9 @@ export default class WorksDetails extends Component {
               <a href="/">Back to Work</a>
             </div>
             <div>
-              {prevModal && <a href={`/works/${prevId}`}>previous</a>}
+              {prevModal && <a href={`/works/${prevId}`}>Previous</a>}
               {prevModal && nextModal && <span> | </span>}
-              {nextModal && <a href={`/works/${nextId}`}>next</a>}
+              {nextModal && <a href={`/works/${nextId}`}>Next</a>}
             </div>
           </div>
         </div>
