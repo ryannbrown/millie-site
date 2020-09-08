@@ -55,10 +55,11 @@ export default class About extends Component {
                   backgroundRepeat: `no-repeat`,
                   // backgroundAttachment: `fixed`,
                   height: `75vh`,
-                  width: `100%`,
+                  width: `95%`,
                   marginBottom: `-25%`,
                   position: "absolute",
                   top: "35%",
+                  marginLeft:'15px'
                   // background: `linear-gradient(to top, transparent 10%, #ffffff )`
                   // display: `flex`,
                   // alignItems: `center`,

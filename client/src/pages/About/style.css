@@ -18,6 +18,11 @@
     
 }
 
+@media (max-width:997px) {
+    .about {
+        padding:10px;
+    }
+}
 .about {
     color:#FF8686;
     text-align:left;
@@ -28,6 +33,12 @@
     margin: 0px auto;
     line-height:2rem;
 }
+
+.about h1 {
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
 
 .about-greeting {
     text-align:left;
