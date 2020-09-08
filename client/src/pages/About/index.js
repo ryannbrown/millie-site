@@ -73,7 +73,21 @@ export default class About extends Component {
           </div>
           <div className="pink-block">
             <div className="narrow">
-            <div className="about-greeting">
+            {/* <div className="about-greeting">
+              <h1>Hi There!</h1>
+              <p>
+                Welcome to my blog of creative work. My name is Millicent, but I
+                go by Millie. I am from Charlotte, North Carolina, and I work
+                remotely in Northern California as a full-time illustrator. I am
+                passionate about writing, illustration, art and fashion. This
+                serves as a place for me to show you the person behind my
+                writing and designs, and I hope that you will feel inspired by
+                it. Thank you for your time, and I look forward to sharing with
+                you a more intimate look at my creations. Sincerely, Millie
+              </p>
+            </div> */}
+          </div>
+           <div className="about">
               <h1>Hi There!</h1>
               <p>
                 Welcome to my blog of creative work. My name is Millicent, but I
@@ -86,7 +100,6 @@ export default class About extends Component {
                 you a more intimate look at my creations. Sincerely, Millie
               </p>
             </div>
-          </div>
           </div>
           <div className="white-block">
             <div className="about-contact">

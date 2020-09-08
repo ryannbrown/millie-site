@@ -18,6 +18,17 @@
     
 }
 
+.about {
+    color:#FF8686;
+    text-align:left;
+    position: relative;
+    /* padding-top: 75%; */
+    padding-top: 40vh;
+    max-width: 575px;
+    margin: 0px auto;
+    line-height:2rem;
+}
+
 .about-greeting {
     text-align:left;
     color:#FF8686;

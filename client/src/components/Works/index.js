@@ -35,20 +35,14 @@ console.log(this.props.worksObject)
         const worksCards = this.props.worksObject.map((item, i) =>
             <div onClick={()=>{this.navTo(i)}} className="off" style={{
                 backgroundImage: `url(https://millie-site.s3.amazonaws.com/${item.image})`,
-                backgroundColor: `pink`,
-                // opacity: `90%`,
                 backgroundBlendMode: `multiply`,
                 backgroundPosition: `center`,
                 backgroundSize: `cover`,
                 backgroundRepeat: `no-repeat`,
-                // backgroundAttachment: `fixed`,
                 display: `flex`,
                 alignItems: `center`,
                 position: `relative`,
-                // padding:`15px`
-                //   cover no-repeat center center fixed`
             }}>
-                    {/* <Image className="off-image" src={item.image} /> */}
                     <div className="off-description">
                         <p className="off-title">{item.title}</p>
                     </div>
