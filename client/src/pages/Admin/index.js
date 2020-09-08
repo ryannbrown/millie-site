@@ -30,7 +30,7 @@ class Admin extends Component {
         let pass = this.pass.current.value
         
    
-        if (pass === process.env.REACT_APP_PASS && email === process.env.REACT_APP_LOGIN) {
+        if (pass === process.env.REACT_APP_PASS && email === process.env.REACT_APP_LOGIN.toLowerCase()) {
         // if (pass === process.env.PASS && email === process.env.LOGIN) {
             this.setState({
                 isLoggedIn: true
