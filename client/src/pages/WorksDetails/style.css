@@ -46,7 +46,7 @@ a:hover {
 .works-title {
   font-size: 3rem;
   color: #ff8686;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .modal-description {
@@ -71,7 +71,7 @@ a:hover {
   }
 
   .content-row {
-    margin-top:10%;
+    margin-top: 10%;
   }
 }
 

@@ -55,9 +55,9 @@ left:30%;
   margin-left: -50%;
 }
 
-@media (max-width:997px) {
+@media (max-width: 997px) {
   .off-description {
-    bottom:-30%;
+    bottom: -30%;
   }
 }
 
@@ -68,6 +68,7 @@ left:30%;
 }
 
 .off-title {
+  font-family: "Palm Canyon Drive", sans-serif;
   margin-top: 1rem;
   font-size: 0.95rem;
   /* margin-bottom: 0rem; */
