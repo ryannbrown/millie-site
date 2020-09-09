@@ -3,10 +3,18 @@
   overflow-x:hidden;
 } */
 
+
+@font-face {
+  font-family:'Palm Canyon Drive';
+  src: local('Palm-Canyon-Drive'), url(./fonts/palmcanyon.woff)format('woff');
+}
+
 * {
   font-family: 'canada-type-gibson', sans-serif;
   scroll-behavior: smooth;
 }
+
+
 
 
 /* 
@@ -36,6 +44,7 @@
 
 h1, h2 {
 font-weight:400;
+font-family: 'Palm Canyon Drive'
 }
 
 h1 {
@@ -44,16 +53,10 @@ h1 {
 
 p, li, h3, h4, h5, a, button {
 font-weight:200;
-  letter-spacing:.1rem
+  letter-spacing:.1rem;
+  font-family: 'canada-type-gibson', sans-serif;
 }
 
-.libre {
-  font-family: 'Libre Baskerville', serif;
-}
-
-.rob {
-  font-family: 'Roboto', sans-serif;
-}
 
 
 /* .App {
