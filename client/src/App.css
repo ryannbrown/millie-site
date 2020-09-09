@@ -9,6 +9,26 @@
 }
 
 
+/* 
+.Row {
+  margin-left: 0;
+   margin-right: 0;
+} */
+
+.row {
+  padding-left:0;
+  padding-right:0
+}
+.grid {
+  padding-left:0;
+  padding-right:0
+}
+.col-md-12 {
+  padding-left:0px !important;
+  padding-right:0px !important;
+}
+
+
 .App {
   text-align: center;
   overflow-x: hidden !important;

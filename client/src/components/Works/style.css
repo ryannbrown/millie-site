@@ -55,6 +55,12 @@ left:30%;
   margin-left: -50%;
 }
 
+@media (max-width:997px) {
+  .off-description {
+    bottom:-30%;
+  }
+}
+
 .off-page-title {
 }
 .off-page-subtitle {
