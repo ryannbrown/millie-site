@@ -7,7 +7,7 @@ import Navigation from "../../components/Navigation";
 import "./style.css";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
-
+import pinkArrow from '../../media/pinkarrow.png'
 import Hero from "../../components/Hero";
 import Works from "../../components/Works";
 
@@ -48,6 +48,7 @@ export default class Homepage extends Component {
           logo={whiteLogo}
           scrolledLogo={pinkLogo}
           scrollDistance="120"
+          arrow={pinkArrow}
         />
         <Hero logo={whiteLogo} worksObject={this.props.worksObject}></Hero>
         <Works worksObject={this.props.worksObject}></Works>

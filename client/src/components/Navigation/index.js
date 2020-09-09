@@ -5,10 +5,6 @@ import React, { Component } from "react";
 import "./style.css";
 import { Drawer } from "@material-ui/core";
 import whiteLogo from "../../media/white-logo.png";
-// import TemporaryDrawer from '../Drawer/index'
-
-// import logo from '../../media/moons.png'
-import whiteArrow from '../../media/white-up-arrow.png'
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -100,7 +96,7 @@ export default class Navigation extends Component {
               About
             </Nav.Link>
             <Nav.Link className="nav-arrow">
-              <Image onClick={this.scrollUp} style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={whiteArrow}></Image>
+              <Image onClick={this.scrollUp} style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={this.props.arrow}></Image>
             </Nav.Link>
           </Nav>
           {/* <Navbar.Collapse id="basic-navbar-nav">

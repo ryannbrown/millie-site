@@ -74,8 +74,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 
 .nav-arrow img {
-  max-width: 50%;
-  margin-top: 5px;
+  width:90%;
 }
 
 @media (max-width: 667px) {

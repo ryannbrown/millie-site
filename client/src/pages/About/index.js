@@ -7,7 +7,7 @@ import Navigation from "../../components/Navigation";
 import "./style.css";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
-
+import whiteArrow from '../../media/whitearrow.png'
 import mill from "../../media/mill-desktop.png";
 import { Hidden } from "@material-ui/core";
 
@@ -37,6 +37,7 @@ export default class About extends Component {
           scrolledLogo={whiteLogo}
           logo={pinkLogo}
           scrollDistance="120"
+          arrow={whiteArrow}
         />
         <div className="about-content">
           <div className="white-block">
