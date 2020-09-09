@@ -21,6 +21,7 @@ import Navigation from "../../components/Navigation";
 import logo from "../../media/millie-logo-colored.png";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
+import whiteArrow from '../../media/whitearrow.png'
 require("dotenv").config();
 
 export default class WorksDetails extends Component {
@@ -87,6 +88,7 @@ export default class WorksDetails extends Component {
           scrolledLogo={whiteLogo}
           logo={pinkLogo}
           scrollDistance="1"
+          arrow={whiteArrow}
         />
 
         <div className="works-page">
