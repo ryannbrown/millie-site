@@ -8,7 +8,7 @@ import whiteLogo from "../../media/white-logo.png";
 // import TemporaryDrawer from '../Drawer/index'
 
 // import logo from '../../media/moons.png'
-// import whiteArrow from '../../media/white-arrow.png'
+import whiteArrow from '../../media/white-up-arrow.png'
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -19,6 +19,10 @@ export default class Navigation extends Component {
       status: "top",
       isMobile: false,
     };
+  }
+
+  scrollUp =() => {
+    window.scrollTo(0, 0);
   }
 
   componentDidMount() {
@@ -94,6 +98,9 @@ export default class Navigation extends Component {
               href="/about"
             >
               About
+            </Nav.Link>
+            <Nav.Link className="nav-arrow">
+              <Image onClick={this.scrollUp} style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={whiteArrow}></Image>
             </Nav.Link>
           </Nav>
           {/* <Navbar.Collapse id="basic-navbar-nav">

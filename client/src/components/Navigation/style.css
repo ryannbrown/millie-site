@@ -69,12 +69,20 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 
 .nav-arrow {
-  position: absolute;
-  right: 25px;
-  top: 40px;
-  width: 25px;
+  width: 55px;
+  margin-left: 5rem;
 }
 
+@media (max-width:667px) {
+
+  .nav-arrow {
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    width: 50px;
+ 
+  }
+}
 .btn-primary {
   border-color: transparent;
   background-color: transparent;
