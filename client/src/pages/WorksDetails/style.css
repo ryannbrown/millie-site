@@ -69,6 +69,10 @@ a:hover {
     padding: 15%;
     margin-left: 0%;
   }
+
+  .content-row {
+    margin-top:10%;
+  }
 }
 
 @media (max-width: 667px) {

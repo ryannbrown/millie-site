@@ -92,7 +92,7 @@ export default class WorksDetails extends Component {
         <div className="works-page">
           {thisModal ? (
             <div className="works-container">
-              <Row>
+              <Row className="content-row">
                 <Col
                   xs={{ span: 12, order: 2 }}
                   sm={{ span: 12, order: 2 }}
