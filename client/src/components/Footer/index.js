@@ -1,42 +1,31 @@
-import { Container, Nav, Button, Image, Row, Col } from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
-import React, { Component } from 'react';
+import { Container, Nav, Button, Image, Row, Col } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
-import './style.css';
+import "./style.css";
 
+export default class Footer extends Component {
+  constructor(props) {
+    super(props);
 
+    this.listener = null;
+    this.state = {
+      status: "top"
+    };
+  }
 
+  componentDidMount() {}
 
-export default class  Footer extends Component {
+  // componentDidUpdate() {
+  //   document.removeEventListener("scroll", this.listener);
+  // }
 
-    constructor(props) { 
-        super(props);
-
-        this.listener = null;
-        this.state = {
-            status: "top"
-        };
-    }
-
-
-    componentDidMount() {
-
-    }
-
-    // componentDidUpdate() {
-    //   document.removeEventListener("scroll", this.listener);
-    // }
-
-    render() {
-
-
-
-
-
-        return (
-            <Row>
-            <Col  style={{
+  render() {
+    return (
+      <Row>
+        <Col
+          style={{
             // backgroundImage: `url(${starBackground})`,
             backgroundColor: ` #FF8686`,
             opacity: `90%`,
@@ -50,18 +39,17 @@ export default class  Footer extends Component {
             alignItems: `center`,
             position: `relative`,
             width: `350px`,
-            height:`200px`,
+            height: `200px`
             //   cover no-repeat center center fixed`
-        }} className="footer-div">
-                <div className="footer-content-box">
-            <p>Powered by The Media Team</p>
+          }}
+          className="footer-div"
+        >
+          <div className="footer-content-box">
+            <p>Powered by Just Soup</p>
             <FontAwesomeIcon icon={faBolt} />
-                </div>
-    
-            </Col>
-          </Row>
- 
-      )
-
-    }
+          </div>
+        </Col>
+      </Row>
+    );
+  }
 }

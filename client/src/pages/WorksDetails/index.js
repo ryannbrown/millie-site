@@ -21,7 +21,7 @@ import Navigation from "../../components/Navigation";
 import logo from "../../media/millie-logo-colored.png";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
-import whiteArrow from '../../media/whitearrow.png'
+import whiteArrow from "../../media/whitearrow.png";
 require("dotenv").config();
 
 export default class WorksDetails extends Component {
@@ -129,7 +129,7 @@ export default class WorksDetails extends Component {
 
           <div className="nav-box">
             <div>
-              <a href="/">Back to Work</a>
+              <a href="/">Back to Works</a>
             </div>
             <div>
               {prevModal && <a href={`/works/${prevId}`}>Previous</a>}
