@@ -45,7 +45,9 @@ export default class Footer extends Component {
           className="footer-div"
         >
           <div className="footer-content-box">
+              <a href="mailto:ryanbrownmedia@gmail.com,timsteeleallenl@gmail.com?subject=Websites">
             <p>Powered by Just Soup</p>
+            </a>
             <FontAwesomeIcon icon={faBolt} />
           </div>
         </Col>

@@ -40,7 +40,7 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home-page">
         <Navigation
           color="white"
           scrolledBgColor="white"
