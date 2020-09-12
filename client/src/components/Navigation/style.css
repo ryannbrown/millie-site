@@ -73,8 +73,21 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
   margin-left: 5rem;
 }
 
+.nav-box * {
+  font-family: "canada-type-gibson", sans-serif;
+  scroll-behavior: smooth;
+  color: #ffcaca;
+}
+
+.nav-box * a:hover {
+  text-decoration: none;
+  color: #ff9393;
+  /* color: currentColor; */
+}
+
 .nav-arrow img {
-  width:90%;
+  width: 50%;
+  margin-top: 5px;
 }
 
 @media (max-width: 667px) {
