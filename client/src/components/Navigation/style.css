@@ -93,8 +93,9 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 @media (max-width: 667px) {
   .nav-arrow {
     position: absolute;
-    right: 25px;
-    top: 40px;
+    display: inline-block;
+    right: 5px;
+    top: 6px;
     width: 50px;
   }
 }
