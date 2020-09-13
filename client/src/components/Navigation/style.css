@@ -134,4 +134,16 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
   .navbar-brand img {
     padding: 10px;
   }
+
+  @media (max-width:677px) {
+    .quote-div{
+        width:75%;
+    }
+    .home-page .navbar-brand img {
+        display: none;
+    }
+    .home-page .navbar-nav {
+        margin-top:0%;
+    }
+}
 }
