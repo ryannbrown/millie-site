@@ -7,7 +7,7 @@ import Navigation from "../../components/Navigation";
 import "./style.css";
 import whiteLogo from "../../media/white-logo.png";
 import pinkLogo from "../../media/millie-logo-colored.png";
-import whiteArrow from '../../media/whitearrow.png'
+import whiteArrow from "../../media/whitearrow.png";
 import mill from "../../media/mill-desktop.png";
 import { Hidden } from "@material-ui/core";
 
@@ -19,7 +19,7 @@ export default class About extends Component {
     this.state = {
       status: "top",
       showModal: false,
-      forms: [],
+      forms: []
     };
   }
 
@@ -60,7 +60,7 @@ export default class About extends Component {
                   marginBottom: `-25%`,
                   position: "absolute",
                   top: "35%",
-                  marginLeft:'10px'
+                  marginLeft: "10px"
                   // background: `linear-gradient(to top, transparent 10%, #ffffff )`
                   // display: `flex`,
                   // alignItems: `center`,
@@ -75,7 +75,7 @@ export default class About extends Component {
           </div>
           <div className="pink-block">
             <div className="narrow">
-            {/* <div className="about-greeting">
+              {/* <div className="about-greeting">
               <h1>Hi There!</h1>
               <p>
                 Welcome to my blog of creative work. My name is Millicent, but I
@@ -88,18 +88,19 @@ export default class About extends Component {
                 you a more intimate look at my creations. Sincerely, Millie
               </p>
             </div> */}
-          </div>
-           <div className="about">
+            </div>
+            <div className="about">
               <h1>Hi There!</h1>
               <p>
                 Welcome to my blog of creative work. My name is Millicent, but I
-                go by Millie. I am from Charlotte, North Carolina, and I work
-                remotely in Northern California as a full-time illustrator. I am
-                passionate about writing, illustration, art and fashion. This
-                serves as a place for me to show you the person behind my
-                writing and designs, and I hope that you will feel inspired by
-                it. Thank you for your time, and I look forward to sharing with
-                you a more intimate look at my creations. Sincerely, Millie
+                go by Millie. I am from Raleigh, North Carolina, and I work
+                remotely in Southern California as an account coordinator for a
+                boutique public relations agency. I am passionate about writing,
+                illustration, art and fashion. This serves as a place for me to
+                show you the person behind my writing and designs, and I hope
+                that you will feel inspired by it. Thank you for your time, and
+                I look forward to sharing with you a more intimate look at my
+                creations. Sincerely, Millie
               </p>
             </div>
           </div>
