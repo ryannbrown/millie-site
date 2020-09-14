@@ -94,13 +94,14 @@ export default class About extends Component {
               <p>
                 Welcome to my blog of creative work. My name is Millicent, but I
                 go by Millie. I am from Raleigh, North Carolina, and I work
-                remotely in Southern California as an account coordinator for a
-                boutique public relations agency. I am passionate about writing,
-                illustration, art and fashion. This serves as a place for me to
-                show you the person behind my writing and designs, and I hope
-                that you will feel inspired by it. Thank you for your time, and
-                I look forward to sharing with you a more intimate look at my
-                creations. Sincerely, Millie
+                remotely in Southern California as an associate account
+                executive for a boutique public relations agency. I am
+                passionate about writing, illustration, art and fashion. This
+                serves as a place for me to show you the person behind my
+                writing and designs, and I hope that you will feel inspired by
+                it. Thank you for your time, and I look forward to sharing with
+                you a more intimate look at my creations. <br></br>Sincerely,
+                Millie
               </p>
             </div>
           </div>
