@@ -110,15 +110,16 @@ export default class About extends Component {
               <h1>Feel free to reach out!</h1>
               <p>
                 Contact me anytime, just shoot me an email at:{" "}
-                <span>illustrations@gmail.com</span>
-                <a href="https://www.w3schools.com">illustrations@gmail.com</a>
+                <a href="https://www.instagram.com/millicentmakesart/">
+                  illustrations@gmail.com
+                </a>
               </p>
               <p>
                 Follow on:
                 <a href="https://www.instagram.com/millicentmakesart/">
                   @instagram
                 </a>
-                Follow on:
+                <span> or follow on:</span>
                 <a href="https://www.facebook.com/milliegrace22">@facebook</a>
               </p>
               <p>
