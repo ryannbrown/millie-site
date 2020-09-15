@@ -28,11 +28,8 @@ class Admin extends Component {
         event.preventDefault();
         let email = this.email.current.value.toLowerCase()
         let pass = this.pass.current.value
-        let verifyEmail = process.env.REACT_APP_LOGIN;
-        
-        let verifyPassword = process.env.REACT_APP_PASS;
-        
-        if (pass === verifyPassword && email === verifyEmail) {
+ 
+        if (pass === process.env.REACT_APP_PASS && email === process.env.REACT_APP_LOGIN) {
             this.setState({
                 isLoggedIn: true
             })
