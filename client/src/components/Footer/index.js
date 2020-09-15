@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 
-import jsLogo from "../../media/jswhite.png"
+import jsLogo from "../../media/jswhite.png";
 
 export default class Footer extends Component {
   constructor(props) {
@@ -47,11 +47,10 @@ export default class Footer extends Component {
           className="footer-div"
         >
           <div className="footer-content-box">
-              <a target='_blank' href="https://www.justsoup.io">
-          <img width="20px" src={jsLogo}></img>
-            <p>Powered by Just Soup</p>
+            <a target="_blank" href="https://www.justsoup.io">
+              <img width="20px" src={jsLogo}></img>
+              <p>Powered by Just Soup</p>
             </a>
-            <FontAwesomeIcon icon={faBolt} />
           </div>
         </Col>
       </Row>
