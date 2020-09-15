@@ -1,31 +1,29 @@
 .footer-div {
-    /* position:absolute;
+  /* position:absolute;
     top:25%; */
 }
 
-.footer-content-box{
-    width:100%;
-    position:absolute;
-    top:40%;
-    color:white;
+.footer-content-box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .footer-content-box a {
-    color:white;
+  color: white;
 }
 
-
-.comet-image{
-    width:5%;
-    margin-top: -1%;
+.comet-image {
+  width: 5%;
+  margin-top: -1%;
 }
 
-@media (max-width:667px) {
-    .comet-image {
-        width: 25%;
-        margin-top: -7.5%;
-    }
-    .footer-content-box{
-        width:95%;
-    }
+@media (max-width: 667px) {
+  .comet-image {
+    width: 25%;
+    margin-top: -7.5%;
+  }
 }

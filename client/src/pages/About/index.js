@@ -115,12 +115,12 @@ export default class About extends Component {
                 </a>
               </p>
               <p>
-                Follow on:
+                Follow me on:
                 <a href="https://www.instagram.com/millicentmakesart/">
+                  {" "}
                   @instagram
                 </a>
-                <span> or follow on:</span>
-                <a href="https://www.facebook.com/milliegrace22">@facebook</a>
+                <a href="https://www.facebook.com/milliegrace22"> @facebook</a>
               </p>
               <p>
                 To download my resume, click the link! <span>Millie.pdf</span>
