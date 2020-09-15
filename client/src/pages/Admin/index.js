@@ -26,12 +26,16 @@ class Admin extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        let email = this.email.current.value
+        let email = this.email.current.value.toLowerCase()
         let pass = this.pass.current.value
+        console.log(email);
+        console.log(pass)
+
+        let verifyEmail = process.env.REACT_APP_LOGIN;
+        console.log(verifyEmail);
+        let verifyPassword = process.env.REACT_APP_PASS;
         
-   
-        if (pass === process.env.REACT_APP_PASS && email === process.env.REACT_APP_LOGIN.toLowerCase()) {
-        // if (pass === process.env.PASS && email === process.env.LOGIN) {
+        if (pass === verifyPassword && email === verifyEmail) {
             this.setState({
                 isLoggedIn: true
             })
