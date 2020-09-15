@@ -47,7 +47,7 @@ class Admin extends Component {
 
         if (!isLoggedIn) {
             return (
-                <div className="page-content">
+                <div className="login-page-content">
                     <Form className="login-form" onSubmit={this.handleSubmit}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>

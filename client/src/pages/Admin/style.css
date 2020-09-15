@@ -1,5 +1,13 @@
 
 
+.login-page-content {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
 
 .delete-icon {
     position: absolute;
@@ -28,9 +36,7 @@
 }
 
 .login-form {
-    margin: 25% auto;
-    width: 50%;
-    height: 100vh;
+    width: 25%;
 }
 
 .lead-modal {
