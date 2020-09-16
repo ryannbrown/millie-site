@@ -60,6 +60,8 @@ export default class Navigation extends Component {
                 ? "transparent"
                 : `${this.props.scrolledBgColor}`,
             transition: ".6s",
+            display: 'flex',
+            justifyContent:'center'
           }}
         >
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
