@@ -110,7 +110,7 @@ export default class About extends Component {
               <h1>Feel free to reach out!</h1>
               <p>
                 Contact me anytime, just shoot me an email at:{" "}
-                <a href="https://www.instagram.com/millicentmakesart/">
+                <a href="mailto:illustrations@gmail.com">
                   illustrations@gmail.com
                 </a>
               </p>
@@ -123,7 +123,8 @@ export default class About extends Component {
                 <a href="https://www.facebook.com/milliegrace22"> @facebook</a>
               </p>
               <p>
-                To download my resume, click the link! <span>Millie.pdf</span>
+                Or follow me on{" "}
+                <a href="https://dribbble.com/mgogoi"> dribbble</a>
               </p>
             </div>
           </div>
