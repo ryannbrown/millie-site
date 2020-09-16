@@ -110,14 +110,21 @@ export default class About extends Component {
               <h1>Feel free to reach out!</h1>
               <p>
                 Contact me anytime, just shoot me an email at:{" "}
-                <span>illustrations@gmail.com</span>
+                <a href="mailto:illustrations@gmail.com">
+                  illustrations@gmail.com
+                </a>
               </p>
               <p>
-                Follow on Instagram: <span>@instagram </span>
-                Facebook: <span>@facebook</span>
+                Follow me on:
+                <a href="https://www.instagram.com/millicentmakesart/">
+                  {" "}
+                  @instagram
+                </a>
+                <a href="https://www.facebook.com/milliegrace22"> @facebook</a>
               </p>
               <p>
-                To download my resume, click the link! <span>Millie.pdf</span>
+                Or follow me on{" "}
+                <a href="https://dribbble.com/mgogoi"> dribbble</a>
               </p>
             </div>
           </div>

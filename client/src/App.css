@@ -1,21 +1,16 @@
-
 /* * {
   overflow-x:hidden;
 } */
 
-
 @font-face {
-  font-family:'Palm Canyon Drive';
-  src: local('Palm-Canyon-Drive'), url(./fonts/palmcanyon.woff)format('woff');
+  font-family: "Palm Canyon Drive";
+  src: local("Palm-Canyon-Drive"), url(./fonts/palmcanyon.woff) format("woff");
 }
 
 * {
-  font-family: 'canada-type-gibson', sans-serif;
+  font-family: "canada-type-gibson", sans-serif;
   scroll-behavior: smooth;
 }
-
-
-
 
 /* 
 .Row {
@@ -24,40 +19,44 @@
 } */
 
 .row {
-  padding-left:0;
-  padding-right:0
+  padding-left: 0;
+  padding-right: 0;
 }
 .grid {
-  padding-left:0;
-  padding-right:0
+  padding-left: 0;
+  padding-right: 0;
 }
 .col-md-12 {
-  padding-left:0px !important;
-  padding-right:0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
-
 
 .App {
   text-align: center;
   overflow-x: hidden !important;
 }
 
-h1, h2 {
-font-weight:400;
-font-family: 'Palm Canyon Drive', sans-serif;
+h1,
+h2 {
+  font-weight: 400;
+  font-family: "Palm Canyon Drive", sans-serif;
 }
 
 h1 {
-  margin:0;
+  margin: 0;
 }
 
-p, li, h3, h4, h5, a, button {
-font-weight:200;
-  letter-spacing:.1rem;
-  font-family: 'canada-type-gibson', sans-serif;
+p,
+li,
+h3,
+h4,
+h5,
+a,
+button {
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  font-family: "canada-type-gibson", sans-serif;
 }
-
-
 
 /* .App {
   background-image:url(../src/media/moroccan-flower.png);
@@ -104,13 +103,12 @@ font-weight:200;
   /* margin-top:5%; */
 }
 
-
 .primaryTextColor {
-  color: #0E3B62;
+  color: #0e3b62;
 }
 
-.lightText  {
-  color:  #ECECEC
+.lightText {
+  color: #ececec;
 }
 
 .darkText {
@@ -132,20 +130,14 @@ hr {
     border: 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #fff;
-}
+  }
 }
 
 .addPadding {
-  padding:5%;
+  padding: 5%;
 }
 
-
-.footer-div{
-  height:200px;
-  background-color:lightblue;
-}
-
-.footer-div > * {
-  position:absolute;
-  top:50%;
+.footer-div {
+  height: 200px;
+  background-color: lightblue;
 }
