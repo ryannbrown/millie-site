@@ -57,6 +57,14 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
   background-color: transparent;
   font-weight: 400;
   padding: 1.5rem 1rem;
+
+}
+
+@media (max-width:667px) {
+  .navbar{
+    display:flex;
+    justify-content: center;
+  }
 }
 
 .nav-link {
