@@ -124,7 +124,7 @@ export default class About extends Component {
               </p>
               <p>
                 Or follow me on{" "}
-                <a href="https://dribbble.com/mgogoi"> dribbble</a>
+                <a href="https://dribbble.com/mgogoi"> dribbble</a> !
               </p>
             </div>
           </div>
