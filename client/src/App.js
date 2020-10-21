@@ -83,8 +83,8 @@ console.log('app props', this.props)
        >
         <Switch>
           <Route path="/admin" component={Admin}/>
-          {/* <Route path="/about" component={About}/> */}
-          <Route path="/about" render={(props) => <About {...props} activatePage={this.activatePage} activePage={'About'} />} />
+          <Route path="/about" component={About}/>
+          {/* <Route path="/about" render={(props) => <About {...props} activatePage={this.activatePage} activePage={'About'} />} /> */}
           <Route path="/works/:id" render={(props) => <WorksDetails {...props} worksObject={worksObject} activePage={'Works'} title={`Props through render`} />} />
           <Route exact path="/" render={(props) => <Homepage {...props} worksObject={worksObject} title={`Props through render`} />} />
         </Switch>
