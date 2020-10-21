@@ -38,6 +38,7 @@ export default class About extends Component {
           logo={pinkLogo}
           scrollDistance="120"
           arrow={whiteArrow}
+          activePage='About'
         />
         <div className="about-content">
           <div className="white-block">

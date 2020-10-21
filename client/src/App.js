@@ -35,7 +35,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      worksObject: []
+      worksObject: [],
+      activePage: 'Works'
     };
     // this.handler = this.handler.bind(this);
   }
@@ -51,9 +52,17 @@ class App extends Component {
         });
       });
   }
+
+  // activatePage = (e) => {
+  //   console.log('page', e)
+  //   this.setState({
+  //     activePage: e
+  //   })
+  // }
   
 componentDidMount() {
 this.fetchPosts();
+console.log('app props', this.props)
 
 
   // const history = createHistory({
@@ -64,8 +73,8 @@ this.fetchPosts();
  
   render() {
 
-    const {worksObject} = this.state;
 
+    const {worksObject, activePage} = this.state;
   return (
     <div className="App">
       {/* <Navigation /> */}
@@ -74,8 +83,9 @@ this.fetchPosts();
        >
         <Switch>
           <Route path="/admin" component={Admin}/>
-          <Route path="/about" component={About}/>
-          <Route path="/works/:id" render={(props) => <WorksDetails {...props} worksObject={worksObject} title={`Props through render`} />} />
+          {/* <Route path="/about" component={About}/> */}
+          <Route path="/about" render={(props) => <About {...props} activatePage={this.activatePage} activePage={'About'} />} />
+          <Route path="/works/:id" render={(props) => <WorksDetails {...props} worksObject={worksObject} activePage={'Works'} title={`Props through render`} />} />
           <Route exact path="/" render={(props) => <Homepage {...props} worksObject={worksObject} title={`Props through render`} />} />
         </Switch>
       </Router>

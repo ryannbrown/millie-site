@@ -89,6 +89,7 @@ export default class WorksDetails extends Component {
           logo={pinkLogo}
           scrollDistance="1"
           arrow={whiteArrow}
+          activePage='Works'
         />
 
         <div className="works-page">
