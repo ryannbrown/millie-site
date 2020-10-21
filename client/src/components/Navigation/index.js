@@ -9,11 +9,11 @@ import whiteLogo from "../../media/white-logo.png";
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
-
     this.listener = null;
     this.state = {
       status: "top",
       isMobile: false,
+      activePage:this.props.activePage
     };
   }
 
@@ -21,7 +21,9 @@ export default class Navigation extends Component {
     window.scrollTo(0, 0);
   }
 
+
   componentDidMount() {
+    console.log(this.props.activePage)
     // if (window.innerWidth < 667) {
     //   this.setState({
     //     isMobile: true
@@ -72,24 +74,28 @@ export default class Navigation extends Component {
           </Navbar.Brand>
           <Nav className="">
             <Nav.Link
+            // onClick={() => {this.props.activatePage('Works')}}
               style={{
                 color:
                   this.state.status === "top"
                     ? `${this.props.color}`
                     : `${this.props.scrolledColor}`,
                 transition: ".6s",
+                opacity: this.state.activePage === 'Works' ? 1 : .5
               }}
               href="/"
             >
               Works
             </Nav.Link>
             <Nav.Link
+            //  onClick={() => {this.props.activatePage('About')}}
               style={{
                 color:
                   this.state.status === "top"
                     ? `${this.props.color}`
                     : `${this.props.scrolledColor}`,
                 transition: ".6s",
+                opacity: this.state.activePage === 'About' ? 1 : .5
               }}
               href="/about"
             >
