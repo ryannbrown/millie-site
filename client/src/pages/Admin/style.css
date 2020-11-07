@@ -60,3 +60,28 @@
     width:50%;
     margin:15% auto;
 }
+
+.card-deck .card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 27%;
+  margin:15px;
+}
+
+
+.card-deck {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+@media (max-width:667px){
+    .card-deck .card {
+        flex: 1 0 40%;
+    }
+}
