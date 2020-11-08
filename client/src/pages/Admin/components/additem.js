@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Card, ListGroup, ListGroupItem, Button, Image, CardDeck } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Panel from './panel';
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
+import MyEditor from "./MyEditor"
 // import axios from 'axios';
 
 // const queryString = require('query-string');
@@ -16,14 +19,14 @@ class AddItem extends Component {
             isLoggedIn: false,
             catData: [],
             itemPosted: false,
-            file: null
+            file: null,
+            richText: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.fileChanged = this.fileChanged.bind(this);
+        this.handleRichChange = this.handleRichChange.bind(this);
         this.img = React.createRef();
        this.title = React.createRef();
-    //    this.date = React.createRef();
-       this.body = React.createRef();
     }
 
 
@@ -40,12 +43,17 @@ class AddItem extends Component {
         // this.handleImage()
     }
 
+   
+
     handleSubmit(event) {
         event.preventDefault()
         let img = this.img.current.value
         let title = this.title.current.value
         // let date = this.date.current.value
-        let body = this.body.current.value
+        // let body = this.body.current.value
+        let richBody = this.state.richText
+
+        console.log(richBody)
 
         // console.log(date);
 
@@ -78,7 +86,8 @@ class AddItem extends Component {
                     image: filename,
                     title: title,
                     // date: new Date,
-                    body: body
+                    // body: body
+                    richBody: richBody
                 })
             }).then(response => {
                 console.log("hey i did it")
@@ -94,6 +103,16 @@ class AddItem extends Component {
         postItem()
 
     }
+
+
+
+
+  handleRichChange = (value) => {
+    // console.log("changing");
+    console.log(value)
+    this.setState({ richText: value });
+    // console.log(value);
+  }
 
 
     render() {
@@ -117,8 +136,10 @@ class AddItem extends Component {
                         </Form.Group>
                         <Form.Group controlId="addForm">
                             <Form.Label>Work Description</Form.Label>
-                            <Form.Control ref={this.body} as="textarea" rows="5" placeholder="Work Description" />
+                            <MyEditor handleRichChange={this.handleRichChange}></MyEditor>
                         </Form.Group>
+
+                      
                         
                         
                         <Button onClick={ () => {this.setState({itemPosted:true})}} style={{ backgroundColor: 'rgb(255, 134, 134)' }} variant='dark' type="submit">
@@ -128,7 +149,9 @@ class AddItem extends Component {
                             Submit
         </Button>
                     </form>
-                </div>
+
+                
+        </div>
 
             );
         } if (itemPosted) {
@@ -141,12 +164,7 @@ class AddItem extends Component {
             )
         }
     }
-    // if (isLoggedIn) {
-    //     return (
-    //         <AdminPanel></AdminPanel>
 
-    //     );
-    // }
 }
 
 

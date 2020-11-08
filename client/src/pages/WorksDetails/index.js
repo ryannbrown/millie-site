@@ -32,14 +32,6 @@ export default class WorksDetails extends Component {
     };
   }
 
-  addSpaces = () => {
-    console.log("Adding spaces");
-    $(".modal-description").each(function() {
-      var text = $(this).text();
-      $(this).html(text.replace(/\*/g, "<br><br>"));
-    });
-  };
-
   componentDidMount() {
     console.log(this.props.match.params);
     let param = Object.values(this.props.match.params);
@@ -49,10 +41,6 @@ export default class WorksDetails extends Component {
       chosenWork: param
     });
     // this.addSpaces();
-  }
-
-  componentDidUpdate() {
-    this.addSpaces();
   }
 
   render() {
@@ -118,7 +106,7 @@ export default class WorksDetails extends Component {
                   <div className="works-description">
                     <h1 className="works-title">{thisModal.title}</h1>
                     {/* <hr style={{ width: `50%` }}></hr> */}
-                    <p className="modal-description">{thisModal.description}</p>
+                    <p className="modal-description" dangerouslySetInnerHTML={{__html: thisModal.richbody}}></p>
                   </div>
                 </Col>
               </Row>

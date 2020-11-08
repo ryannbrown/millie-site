@@ -12,6 +12,7 @@ import AdminPanel from "../components/panel";
 import Panel from "./panel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import MyEditor from "./MyEditor"
 require("dotenv").config();
 
 class UpdateItem extends Component {
@@ -25,11 +26,12 @@ class UpdateItem extends Component {
       file: null,
       postData: [],
       addImgSaved: false,
-      imageDeleted: false
+      imageDeleted: false,
+      richText: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
-    this.body = React.createRef();
+    // this.body = React.createRef();
  
     // this.img = React.createRef();
   }
@@ -104,14 +106,18 @@ fetchPosts() {
       };
       postItem();
 
-  }
+    }
+
+ 
 
   handleSubmit(event) {
     event.preventDefault();
     let title = this.title.current.value;
-    let body = this.body.current.value;
+    // let body = this.body.current.value;
+    let richBody = this.state.richText;
 
-    const postItem = () => {
+
+    const postItem = (richBody) => {
       console.log("Updating DB");
       // POST TO DB
       fetch("/api/updateWork", {
@@ -122,7 +128,8 @@ fetchPosts() {
         },
         body: JSON.stringify({
           title: title,
-          body: body,
+          // body: body,
+          richBody: richBody,
           id: this.props.id,
         }),
       }).then((response) => {
@@ -135,7 +142,7 @@ fetchPosts() {
         }
       });
     };
-    postItem();
+    postItem(richBody);
   }
 
   handleImages = (f) => {
@@ -187,10 +194,20 @@ console.log(filename)
     postItem();
   };
 
+
+  handleRichChange = (value) => {
+    // console.log("changing");
+    console.log(value)
+    this.setState({ richText: value });
+    // console.log(value);
+  }
+
+  componentDidUpdate() {
+    console.log(this.state)
+  }
+
   render() {
     const { itemUpdated, postData, addImgSaved, imageDeleted } = this.state;
-
-    console.log(postData)
 
     if (postData.imgs) {
         var addImages = postData.imgs.map((item, i) => (
@@ -216,13 +233,6 @@ console.log(filename)
                 ref={this.img}
                 type="file"
               />
-              {/* <Button
-                style={{ backgroundColor: "rgb(255, 134, 134)" }}
-                variant="dark"
-                type="submit"
-              >
-                Save Image
-              </Button> */}
             </form>
           </div>
           {postData.imgs && <div>
@@ -235,6 +245,7 @@ console.log(filename)
             <Form.Group controlId="addForm">
               <Form.Label>Work Title: {postData.title}</Form.Label>
               <Form.Control
+              // value={postData.title}
                 ref={this.title}
                 type="text"
                 placeholder="Work Title"
@@ -242,14 +253,10 @@ console.log(filename)
               />
             </Form.Group>
             <Form.Group controlId="addForm">
-              <Form.Label>Work Description: {postData.description}</Form.Label>
-              <Form.Control
-                ref={this.body}
-                as="textarea"
-                rows="5"
-                required
-                placeholder="Work Description"
-              />
+              <p>Current description: </p>
+              <Form.Label dangerouslySetInnerHTML={{__html: postData.richbody}}></Form.Label>
+              <MyEditor handleRichChange={this.handleRichChange}></MyEditor>
+
             </Form.Group>
             <Button
               onClick={() => {

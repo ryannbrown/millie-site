@@ -38,7 +38,8 @@ app.get("/api/getWorks", cors(), function (req, response) {
   knex
     .select()
     .from("works")
-    .returning("*").orderBy('id')
+    .returning("*")
+    .orderBy("id")
     .then((data) => {
       response.send(JSON.stringify({ data }));
     });
@@ -49,33 +50,34 @@ app.get("/api/getWork/:id", cors(), function (req, response) {
   knex
     .select()
     .from("works")
-    .returning("*").where('id', id)
+    .returning("*")
+    .where("id", id)
     .then((data) => {
       response.send(JSON.stringify({ data }));
     });
 });
 
 app.post("/api/addWork", function (req, res) {
-  const { title, body, image } = req.body;
+  const { title, image, richBody } = req.body;
+  console.log(title, image, richBody);
   knex("works")
     .insert({
       date: new Date(),
       title: title,
-      description: body,
       image: image,
-      // order:
+      richbody: richBody,
     })
     .then(res.send("POST request to the homepage"));
 
-  // posts.push(data)
+  posts.push(data);
 });
 app.post("/api/updateWork", function (req, res) {
-  const { id, title, body } = req.body;
+  const { id, title, richBody } = req.body;
   knex("works")
     .where("id", id)
     .update({
       title: title,
-      description: body,
+      richbody: richBody,
     })
     .then(res.send("POST request to the homepage"));
 

@@ -55,6 +55,15 @@
     padding:25px;
 }
 
+.additional-images svg {
+    cursor: pointer;
+}
+
+.additional-images svg:hover {
+    cursor: pointer;
+    color:rgb(255, 134, 134);
+}
+
 
 .entry-form {
     width:50%;
@@ -84,4 +93,10 @@
     .card-deck .card {
         flex: 1 0 40%;
     }
+}
+
+.quill {
+    height: 336px;
+    margin-bottom: 150px;
+    width: 100%;
 }
