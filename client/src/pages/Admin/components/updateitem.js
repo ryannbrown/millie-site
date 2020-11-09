@@ -27,7 +27,10 @@ class UpdateItem extends Component {
       postData: [],
       addImgSaved: false,
       imageDeleted: false,
-      richText: ''
+      richTextShown: false,
+      workTitle: '',
+      richText: '',
+      defaultRich: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
@@ -38,9 +41,13 @@ class UpdateItem extends Component {
 
   componentDidMount = ()  =>{
     console.log("id:", this.props.id);
- 
+ console.log("cdm", this.state)
 
     this.fetchPosts();
+  }
+
+  componentDidUpdate() {
+    console.log("cdu",this.state)
   }
 
 
@@ -54,6 +61,9 @@ fetchPosts() {
         console.log("inventory", json.data[0]);
         this.setState({
           postData: json.data[0],
+          workTitle: json.data[0].title,
+          defaultRich: json.data[0].richbody,
+          richTextShown: true,
           isLoading: false,
         });
         var size = Object.keys(this.state.postData).length;
@@ -202,12 +212,13 @@ console.log(filename)
     // console.log(value);
   }
 
-  componentDidUpdate() {
-    console.log(this.state)
-  }
-
   render() {
-    const { itemUpdated, postData, addImgSaved, imageDeleted } = this.state;
+    const { itemUpdated, postData, addImgSaved, imageDeleted, richBody } = this.state;
+ 
+    // if (this.state.richTextShown) {
+    //   console.log(this.state.defaultRich)
+    //   var defaultRichText = this.state.defaultRich
+    // }
 
     if (postData.imgs) {
         var addImages = postData.imgs.map((item, i) => (
@@ -241,11 +252,11 @@ console.log(filename)
               </div>}
           <h1>Update Item</h1>
           <form onSubmit={this.handleSubmit} encType="multipart/form-data">
-            <Form.Label>Item Image</Form.Label>
+            {/* <Form.Label>Item Image</Form.Label> */}
             <Form.Group controlId="addForm">
-              <Form.Label>Work Title: {postData.title}</Form.Label>
+              <Form.Label>Work Title:</Form.Label>
               <Form.Control
-              // value={postData.title}
+              defaultValue={this.state.workTitle}
                 ref={this.title}
                 type="text"
                 placeholder="Work Title"
@@ -255,7 +266,9 @@ console.log(filename)
             <Form.Group controlId="addForm">
               <p>Current description: </p>
               <Form.Label dangerouslySetInnerHTML={{__html: postData.richbody}}></Form.Label>
-              <MyEditor handleRichChange={this.handleRichChange}></MyEditor>
+              <MyEditor 
+              defaultRichText={this.state.defaultRich} 
+              handleRichChange={this.handleRichChange}></MyEditor>
 
             </Form.Group>
             <Button
