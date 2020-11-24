@@ -48,18 +48,18 @@ export default class MyEditor extends React.Component {
     this.props.handleRichChange(value);
   };
 
-  //   componentDidMount() {
-  //       console.log(this.props)
-  //   }
-  //   componentDidUpdate(){
-  //     if (this.state.theText === '') {
-  //         if (this.props.defaultRichText) {
-  //             this.setState({
-  //                 theText:this.props.defaultRichText
-  //             })
-  //         }
-  //     }
-  //   }
+    componentDidMount() {
+        console.log(this.props)
+    }
+    componentDidUpdate(){
+      if (this.state.theText === '') {
+          if (this.props.defaultRichText) {
+              this.setState({
+                  theText:this.props.defaultRichText
+              })
+          }
+      }
+    }
 
   render() {
     return (
@@ -68,9 +68,9 @@ export default class MyEditor extends React.Component {
           theme="snow"
           modules={this.modules}
           formats={this.formats}
-          placeholder={
-            "Edit description by copying it into here and making necessary changes..."
-          }
+        //   placeholder={
+        //     "Edit description by copying it into here and making necessary changes..."
+        //   }
           onChange={this.handleChange}
         ></ReactQuill>
       </div>
