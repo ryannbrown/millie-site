@@ -161,6 +161,7 @@ app.post("/api/upload", function (req, res, next) {
 });
 
 if (process.env.NODE_ENV === "production") {
+  app.use(helmet());
   app.use(hsts({
     maxAge: 15552000  // 180 days in seconds
   }))
