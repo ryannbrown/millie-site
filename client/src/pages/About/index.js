@@ -111,8 +111,8 @@ export default class About extends Component {
               <h1>Feel free to reach out!</h1>
               <p>
                 Contact me anytime, just shoot me an email at:{" "}
-                <a href="mailto:illustrations@gmail.com">
-                  illustrations@gmail.com
+                <a href="mailto:milliegogoi02@gmail.com">
+                milliegogoi02@gmail.com
                 </a>
               </p>
               <p>

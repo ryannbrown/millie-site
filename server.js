@@ -18,7 +18,6 @@ const Busboy = require("busboy");
 const busboy = require("connect-busboy");
 const busboyBodyParser = require("busboy-body-parser");
 const cors = require("cors");
-const hsts = require('hsts')
 
 // Strict-Transport-Security: max-age: 15552000; includeSubDomains
 app.use(cors());
@@ -165,9 +164,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(helmet({
     contentSecurityPolicy: false,
   }));
-  app.use(hsts({
-    maxAge: 15552000  // 180 days in seconds
-  }))
+  // app.use(hsts({
+  //   maxAge: 15552000  // 180 days in seconds
+  // }))
   // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
 
